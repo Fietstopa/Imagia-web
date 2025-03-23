@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "/logo.png";
 import "../styles/navbar.css";
 import BookingPage from "./bookingpage"; // Import BookingPage komponentu
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,10 +34,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between w-full my-5 mx-10">
           <img src={logo} alt="" className="h-15" />
           <div className="flex items-center text-white gap-10">
-            <p>Home</p>
-            <a href="">
+            <Link to="/">
+              <p>Home</p>
+            </Link>
+
+            <Link to="/gallery">
               <p>Gallery</p>
-            </a>
+            </Link>
             <p>Room 1</p>
             <p>Room 2</p>
             <button
