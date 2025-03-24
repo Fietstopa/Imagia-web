@@ -1,4 +1,7 @@
 import * as React from "react";
+import IconLoader from "./iconLoader";
+import left from "../../public/arrow_left.svg";
+import right from "../../public/arrow_right.svg";
 
 type ArrowProps = {
   onClick?: () => void;
@@ -60,13 +63,13 @@ const CustomButtonGroupAsArrows: React.FC<{
         onClick={previous}
         className="bg-[#C6B081] text-white px-4 py-2 hover:bg-gray-700 transition"
       >
-        &lt;-
+        <IconLoader link={left} styles=""></IconLoader>
       </button>
       <button
         onClick={next}
         className="bg-[#C6B081] text-white px-4 py-2 hover:bg-gray-700 transition"
       >
-        -&gt;
+        <IconLoader link={right} styles=""></IconLoader>
       </button>
     </div>
   );

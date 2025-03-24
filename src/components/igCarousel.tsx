@@ -28,10 +28,10 @@ const IgCarousel = () => {
     },
   };
   return (
-    <div className="px-5">
+    <div className="px-5 pb-5">
       <CustomCaption
         title="Our"
-        subtitle="Gallery"
+        subtitle="Instagram"
         classProps="py-10"
       ></CustomCaption>
       <Carousel

@@ -1,5 +1,6 @@
 import React from "react";
 import Mansory from "./Mansory";
+import CustomCaption from "./CustomCaption";
 
 const images = [
   "https://picsum.photos/200/300?image=279",
@@ -18,7 +19,12 @@ const images = [
 
 const Galerija = () => {
   return (
-    <div className="p-5">
+    <div className="px-5 py-20">
+      <CustomCaption
+        title="Our"
+        subtitle="Gallery"
+        classProps=""
+      ></CustomCaption>
       <Mansory imageUrls={images} colCount={4} colGap={10}></Mansory>
     </div>
   );

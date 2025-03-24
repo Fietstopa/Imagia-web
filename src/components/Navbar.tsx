@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "/logo.png";
 import "../styles/navbar.css";
-import BookingPage from "./bookingpage"; // Import BookingPage komponentu
-import { Link } from "react-router-dom";
+import BookingPage from "./bookingpage";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const location = useLocation();
+  const isGalleryPage = location.pathname === "/gallery";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,19 +27,17 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar */}
       <div
         className={`fixed top-0 left-0 w-full flex items-center z-[999] transition-all duration-300 ${
-          isScrolled ? "bg-black shadow-lg" : "bg-transparent"
+          isScrolled || isGalleryPage ? "bg-black shadow-lg" : "bg-transparent"
         }`}
       >
         <div className="flex items-center justify-between w-full my-5 mx-10">
-          <img src={logo} alt="" className="h-15" />
+          <img src={logo} alt="Logo" className="h-15" />
           <div className="flex items-center text-white gap-10">
             <Link to="/">
               <p>Home</p>
             </Link>
-
             <Link to="/gallery">
               <p>Gallery</p>
             </Link>
@@ -53,15 +53,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Modal Booking Page */}
       {isBookingOpen && (
         <div
           className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-[1000]"
           onClick={() => setIsBookingOpen(false)}
         >
           <div
-            className="  rounded-lg shadow-xl w-[90%] "
-            onClick={(e) => e.stopPropagation()} // Zabrání zavření při kliknutí dovnitř
+            className="rounded-lg shadow-xl w-[90%]"
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               className="absolute top-2 right-4 text-xl"
