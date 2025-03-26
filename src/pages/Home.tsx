@@ -5,13 +5,9 @@ import Navbar from "../components/Navbar";
 import PromoPageOne from "../screens/promoPageOne";
 import IgCarousel from "../components/igCarousel";
 import Footer from "../components/Footer";
-
-const imageUrl1 =
-  "https://i.pinimg.com/736x/ee/53/dd/ee53ddddc8801eaa90470f5c25934df9.jpg";
-const imageUrl2 =
-  "https://i.pinimg.com/736x/3f/f8/c5/3ff8c540b646444e6f541e6d6d3c13d3.jpg";
-const imageUrl3 =
-  "https://i.pinimg.com/736x/9d/fd/10/9dfd106406fae9b232d8456a7d87be7f.jpg";
+import imageUrl1 from "../../public/images/interior/1.jpg";
+import imageUrl2 from "../../public/images/interior/7.jpg";
+import imageUrl3 from "../../public/images/interior/27.jpg";
 
 const Home = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import CustomCaption from "../components/CustomCaption";
-import f1 from "/foto1.jpg";
-import f2 from "/foto2.jpg";
+import f1 from "/images/foto1.jpg";
+import f2 from "/images/foto2.jpg";
 
 const PromoPageOne = () => {
   return (

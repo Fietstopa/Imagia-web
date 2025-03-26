@@ -1,5 +1,5 @@
 import React from "react";
-import imagia from "/M.png";
+import imagia from "/images/M.png";
 import ig from "/ig.svg";
 import phone from "/phone.svg";
 import fb from "/fb.svg";
