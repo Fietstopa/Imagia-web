@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/imgSwitch.css";
+import { Link } from "react-router-dom";
 
 const WelcomeSign = () => {
   const captureText = "CAPTURE THE ";
@@ -42,9 +43,12 @@ const WelcomeSign = () => {
         Our studio specializes in creating unforgettable images capturing
         cherished memories and showcasing every radiant detail.
       </p>
-      <p className="px-10 py-4 transition outline-[#C6B081]/50 text-[#C6B081] hover:text-white outline outline-solid duration-500 hover:bg-[#C6B081] w-fit">
-        <a href="">Create Reservation</a>
-      </p>
+      <Link to="/reservation">
+        {" "}
+        <p className="px-10 py-4 transition outline-[#C6B081]/50 text-[#C6B081] hover:text-white outline outline-solid duration-500 hover:bg-[#C6B081] w-fit">
+          Create reservation
+        </p>
+      </Link>
     </div>
   );
 };

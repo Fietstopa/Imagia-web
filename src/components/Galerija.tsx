@@ -1,31 +1,31 @@
+// Galerija.jsx (nebo .tsx)
 import React from "react";
 import Mansory from "./Mansory";
 import CustomCaption from "./CustomCaption";
 
-const images = [
-  "https://picsum.photos/200/300?image=279",
-  "https://picsum.photos/400/400?image=400",
-  "https://picsum.photos/600/400?image=501",
-  "https://picsum.photos/200/200?image=998",
-  "https://picsum.photos/500/400?image=287",
-  "https://picsum.photos/400/600?image=957",
-  "https://picsum.photos/200/300?image=916",
-  "https://picsum.photos/300/600?image=117",
-  "https://picsum.photos/300/300?image=999",
-  "https://picsum.photos/200/200?image=1000",
-  "https://picsum.photos/200/240?image=1011",
-  "https://picsum.photos/200/370?image=1022",
-];
-
 const Galerija = () => {
+  // Ručně vypsané cesty k obrázkům (1.jpg až 20.jpg)
+  const images = [
+    "/images/interior/1.jpg",
+    "/images/interior/2.jpg",
+
+    "/images/interior/7.jpg",
+    "/images/interior/11.jpg",
+    "/images/interior/12.jpg",
+    "/images/interior/13.jpg",
+    "/images/interior/14.jpg",
+    "/images/interior/15.jpg",
+    "/images/interior/16.jpg",
+    "/images/interior/17.jpg",
+    "/images/interior/18.jpg",
+    "/images/interior/19.jpg",
+    "/images/interior/20.jpg",
+  ];
+
   return (
     <div className="px-5 py-20">
-      <CustomCaption
-        title="Our"
-        subtitle="Gallery"
-        classProps=""
-      ></CustomCaption>
-      <Mansory imageUrls={images} colCount={4} colGap={10}></Mansory>
+      <CustomCaption title="Our" subtitle="Gallery" classProps="" />
+      <Mansory imageUrls={images} colCount={4} colGap={10} />
     </div>
   );
 };

@@ -13,8 +13,7 @@ const Footer = () => {
       <div className="flex justify-between items-start mb-6">
         {/* Logo */}
         <div className="flex flex-col items-center justify-center align-middle">
-          <img src={imagia} alt="Logo" className="w-48 mb-2" />
-          <p className="text-gray-400">Imagia Photo Studio</p>
+          <img src={imagia} alt="Logo" className="w-32 mb-2" />
         </div>
 
         {/* Navigace */}
@@ -37,10 +36,19 @@ const Footer = () => {
         {/* Kontakt */}
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-semibold">Contact</h3>
-          IconLoader
-          <p className="text-gray-400">📍 123 Studio Street, Prague</p>
-          <p className="text-gray-400">📞 +420 777 123 456</p>
-          <p className="text-gray-400">✉ info@photostudio.com</p>
+          <a
+            href="https://www.instagram.com/imagia.fotoatelier/"
+            className="text-gray-400 flex hover:text-white"
+          >
+            <IconLoader link={ig} styles="pr-2"></IconLoader>
+            Instagram
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61570517223628"
+            className="text-gray-400 flex hover:text-white"
+          >
+            <IconLoader link={fb} styles="pr-2"></IconLoader>Facebook
+          </a>
         </div>
 
         {/* Sociální média */}
@@ -48,19 +56,12 @@ const Footer = () => {
           <h3 className="text-lg font-semibold">Contact Us</h3>
           <div className="flex flex-col gap-4">
             <a href="#" className="text-gray-400 flex hover:text-white">
-              <IconLoader link={ig} styles="pr-2"></IconLoader>
-              Instagram
-            </a>
-            <a href="#" className="text-gray-400 flex hover:text-white">
               <IconLoader link={phone} styles="pr-2"></IconLoader>
               +420 730 237 937
             </a>
             <a href="#" className="text-gray-400 flex hover:text-white">
               <IconLoader link={email} styles="pr-2"></IconLoader>
-              Email
-            </a>
-            <a href="#" className="text-gray-400 flex hover:text-white">
-              <IconLoader link={fb} styles="pr-2"></IconLoader>Facebook
+              imagia.atelier@gmail.com
             </a>
           </div>
         </div>
@@ -68,7 +69,8 @@ const Footer = () => {
 
       {/* Spodní část - Copyright */}
       <div className="border-t border-gray-600 pt-4 text-center text-gray-400">
-        &copy; {new Date().getFullYear()} PhotoStudio. All rights reserved.
+        &copy; {new Date().getFullYear()} Imagia Fotoateliér. All rights
+        reserved.
       </div>
     </div>
   );

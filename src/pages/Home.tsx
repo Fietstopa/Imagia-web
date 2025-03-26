@@ -7,7 +7,7 @@ import IgCarousel from "../components/igCarousel";
 import Footer from "../components/Footer";
 import imageUrl1 from "../../public/images/interior/1.jpg";
 import imageUrl2 from "../../public/images/interior/7.jpg";
-import imageUrl3 from "../../public/images/interior/27.jpg";
+import imageUrl3 from "../../public/images/interior/12.jpg";
 
 const Home = () => {
   return (
