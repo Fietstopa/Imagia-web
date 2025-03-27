@@ -1,12 +1,11 @@
 import { getCalApi } from "@calcom/embed-react";
-import { div } from "framer-motion/client";
 import { useEffect } from "react";
 import IconLoader from "../iconLoader";
 interface IMyAppProps {
   label: string;
   style: string;
 }
-export default function MyApp({ label, style }: IMyAppProps) {
+export default function ReservationCash({ label, style }: IMyAppProps) {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "rezervace-hotovost" });

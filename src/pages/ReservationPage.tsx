@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ReservationCard from "../components/Reservation/reservationcard";
-import ReservationCash from "../components/Reservation/reservationCash";
+import { useState } from "react";
+import ReservationCard from "../components/Reservation/ReservationCard";
+import ReservationCash from "../components/Reservation/ReservationCash";
 import IconLoader from "@/components/iconLoader";
 const ReservationPage = () => {
   // Ukládáme, zda uživatel zvolil hotovost nebo kartu

@@ -6,7 +6,7 @@ interface Props {
   style: string;
 }
 
-export default function MyApp({ label, hours, style }: Props) {
+export default function ReservationCard({ label, hours, style }: Props) {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({

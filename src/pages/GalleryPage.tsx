@@ -1,5 +1,4 @@
 // src/pages/Gallery.tsx
-import React from "react";
 import Galerija from "../components/Galerija";
 
 const Gallery = () => {

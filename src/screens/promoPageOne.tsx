@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import CustomCaption from "../components/CustomCaption";
 import f1 from "/images/foto1.jpg";
