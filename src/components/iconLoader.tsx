@@ -3,7 +3,7 @@ import React from "react";
 
 interface icoProps {
   link: string;
-  styles: string;
+  styles?: string;
 }
 
 const IconLoader: React.FC<icoProps> = ({ link, styles }) => {

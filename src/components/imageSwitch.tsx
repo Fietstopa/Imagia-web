@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WelcomeSign from "./WelcomeSign";
+
 interface ImageSwitcherProps {
   image1: string;
   image2: string;
@@ -19,9 +20,12 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
   };
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div className="relative w-screen h-screen overflow-x-hidden">
       <div
-        className="flex w-[100%] h-full transition-transform duration-700 ease-in-out"
+        // Wrap your transition classes with `md:` so they only apply on md+ screens
+        className={`flex w-full h-full 
+          md:transition-transform md:duration-700 md:ease-in-out
+        `}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((img, idx) => (
@@ -34,11 +38,16 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
           </div>
         ))}
       </div>
+
+      {/* WelcomeSign */}
       <div className="absolute text-white left-10 bottom-40 flex items-center justify-center z-20">
         <WelcomeSign />
       </div>
+
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
+      {/* Dots / Buttons */}
       <div className="absolute bottom-5 right-0 flex space-x-3 z-10 translate-x-[-50%]">
         {images.map((_, idx) => (
           <button
