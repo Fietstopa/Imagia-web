@@ -20,7 +20,7 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
   };
 
   return (
-    <div className="relative w-screen h-screen overflow-x-hidden">
+    <div className="relative w-screen h-dvh overflow-x-hidden">
       <div
         // Wrap your transition classes with `md:` so they only apply on md+ screens
         className={`flex w-full h-full 
