@@ -5,32 +5,30 @@ import f2 from "/images/foto2.jpg";
 
 const PromoPageOne = () => {
   return (
-    // "overflow-x-hidden" helps prevent a horizontal scrollbar
-    // when elements animate in from off-screen.
-    <div className="flex flex-col items-center justify-center px-5 overflow-x-hidden w-full">
+    <div className="">
       <CustomCaption
         title="Capture & Celebrate:"
         subtitle="Studio for Photography and Events"
         classProps="text-center md:text-6xl!"
       />
 
-      {/* For smaller screens => column; md+ => row */}
-      <div className="flex flex-col md:flex-row gap-10 md:mt-8 w-full">
-        {/* First image: flies in from the left */}
+      {/* Flex container: na mobilu se zobrazí jako sloupec (obrázek, text, obrázek),
+          na md+ jako řádek */}
+      <div className="grid-cols-1 sm:grid-cols-3  grid gap-10 px-5">
+        {/* První obrázek: animuje se zleva */}
         <motion.img
           src={f1}
           alt="Photo 1"
-          className="w-full md:w-1/3 h-auto md:pt-20"
+          className="md:pt-20"
           initial={{ x: -150, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         />
 
-        {/* Text: rises up from the bottom 
-            Use smaller text on mobile (text-base) and bigger on md+ (text-lg) */}
+        {/* Text: animuje se zespodu */}
         <motion.p
-          className="text-base md:text-lg text-[#777777] font-[Montserrat] leading-relaxed max-w-md text-center md:text-left"
+          className="text-base lg:text-lg text-[#777777] font-[Montserrat] leading-relaxed max-w-md text-center md:text-left"
           initial={{ y: 150, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -52,11 +50,11 @@ const PromoPageOne = () => {
           can’t wait to welcome you!
         </motion.p>
 
-        {/* Second image: flies in from the right */}
+        {/* Druhý obrázek: animuje se zprava */}
         <motion.img
           src={f2}
           alt="Photo 2"
-          className="w-full md:w-1/3 h-auto md:pt-20"
+          className=" md:pt-20"
           initial={{ x: 150, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
