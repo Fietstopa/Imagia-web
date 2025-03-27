@@ -23,10 +23,10 @@ const ReservationPage = () => {
 
   return (
     <div className="pt-30 bg-black flex flex-col items-center min-h-screen text-white">
-      {/* If no payment method is selected, display the choice buttons */}
+      {/* Payment method selection */}
       {paymentMethod === null && (
         <div className="text-center my-10">
-          <h2 className="md:text-7xl text-4xl pb-15 font-[Literata] mb-4">
+          <h2 className="md:text-7xl text-4xl pb-15 font-[Literata] ">
             Vyberte způsob platby:
           </h2>
           <div className="flex flex-col md:flex-row gap-y-5 m-auto justify-around items-center">
@@ -48,20 +48,20 @@ const ReservationPage = () => {
         </div>
       )}
 
-      {/* If the user selected card, show eight buttons for reservation duration */}
+      {/* Card selection: show eight buttons for reservation duration */}
       {paymentMethod === "card" && (
-        <div className="mt-8 flex flex-col items-center gap-4">
-          <h2 className="md:text-7xl text-4xl pb-15 font-[Literata] mb-4 text-center">
+        <div className="mt-8 w-full px-4 flex flex-col items-center gap-4">
+          <h2 className="md:text-7xl text-4xl font-[Literata] text-center">
             Vyberte délku rezervace:
           </h2>
-          <div className="flex flex-wrap justify-center gap-5">
+          <div className="flex flex-col py-15 items-center gap-5 w-full">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((hour) => (
               <button
                 key={hour}
                 onClick={() => handleCardClick(hour)}
-                className="bg-[#C7AC81] text-lg px-10 py-5 cursor-pointer"
+                className="bg-[#C7AC81] text-lg w-full md:w-1/2 py-3 cursor-pointer mx-auto"
               >
-                {hour}h
+                {hour} h
               </button>
             ))}
           </div>
