@@ -8,6 +8,10 @@ const Galerija = () => {
   const images = [
     "/images/interior/1.jpg",
     "/images/interior/2.jpg",
+    "/images/interior/3.jpg",
+    "/images/interior/4.jpg",
+    "/images/interior/5.jpg",
+    "/images/interior/6.jpg",
 
     "/images/interior/7.jpg",
     "/images/interior/11.jpg",
@@ -15,17 +19,12 @@ const Galerija = () => {
     "/images/interior/13.jpg",
     "/images/interior/14.jpg",
     "/images/interior/15.jpg",
-    "/images/interior/16.jpg",
-    "/images/interior/17.jpg",
-    "/images/interior/18.jpg",
-    "/images/interior/19.jpg",
-    "/images/interior/20.jpg",
   ];
 
   return (
-    <div className="px-5 py-20">
-      <CustomCaption title="Our" subtitle="Gallery" classProps="" />
-      <Mansory imageUrls={images} colCount={4} colGap={10} />
+    <div className=" py-20">
+      <CustomCaption title="Our" subtitle="Gallery" classProps="text-6xl" />
+      <Mansory imageUrls={images} colGap={10} />
     </div>
   );
 };

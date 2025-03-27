@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { getCalApi } from "@calcom/embed-react";
@@ -34,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-between z-[999] transition-all duration-300 px-5 py-5 ${
+      className={`fixed top-0 left-0 w-full flex items-center justify-between z-[999] transition-all duration-300 px-5 py-5  ${
         isScrolled || isGalleryPage ? "bg-black shadow-lg" : "bg-transparent"
       }`}
     >
@@ -73,17 +72,27 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu (shown when `menuOpen` is true, hidden at md and above) */}
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden absolute top-25 right-0 w-full bg-black shadow-lg flex flex-col items-center text-white gap-5 px-5 py-5">
-          <Link to="/" onClick={() => setMenuOpen(false)}>
+        <div className="md:hidden absolute top-25 border-t-1 left-0 w-screen bg-black shadow-lg flex flex-col text-white ">
+          <Link
+            to="/"
+            onClick={() => setMenuOpen(false)}
+            className="w-full border-b border-white text-center py-2"
+          >
             Home
           </Link>
-          <Link to="/gallery" onClick={() => setMenuOpen(false)}>
+          <Link
+            to="/gallery"
+            onClick={() => setMenuOpen(false)}
+            className="w-full border-b border-white text-center py-2"
+          >
             Gallery
           </Link>
-          <p>Room 1</p>
-          <p>Room 2</p>
+          <p className="w-full border-b border-white text-center py-2">
+            Room 1
+          </p>
+          <p className="w-full text-center py-2">Room 2</p>
         </div>
       )}
     </nav>

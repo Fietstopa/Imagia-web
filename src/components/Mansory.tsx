@@ -2,13 +2,15 @@ import React from "react";
 
 interface MansoryProps {
   imageUrls: string[];
-  colCount: number;
   colGap: number;
 }
 
-const Mansory: React.FC<MansoryProps> = ({ imageUrls, colCount, colGap }) => {
+const Mansory: React.FC<MansoryProps> = ({ imageUrls, colGap }) => {
   return (
-    <div className={`columns-${colCount}`} style={{ columnGap: `${colGap}px` }}>
+    <div
+      className={` md:columns-2 lg:columns-3 xl:columns-4`}
+      style={{ columnGap: `${colGap}px` }}
+    >
       {imageUrls.map((img, i) => (
         <img
           key={i}

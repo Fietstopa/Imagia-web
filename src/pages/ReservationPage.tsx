@@ -13,11 +13,11 @@ const ReservationPage = () => {
       {/* 1) Dokud uživatel nevybere způsob platby, ukazujeme tlačítka */}
       {paymentMethod === null && (
         <div className="text-white my-10">
-          <h2 className="text-7xl pb-15 font-[Literata] mb-4">
+          <h2 className="md:text-7xl text-4xl pb-15 font-[Literata] mb-4">
             Vyberte způsob platby:
           </h2>
-          <div className="flex justify-around">
-            <div>
+          <div className="flex flex-col md:flex-row gap-y-5 m-auto justify-around">
+            <div className="flex justify-center">
               <button
                 onClick={() => setPaymentMethod("card")}
                 className="bg-[#C7AC81] text-lg px-15 py-5"
@@ -26,7 +26,7 @@ const ReservationPage = () => {
                 Card
               </button>
             </div>
-            <div>
+            <div className="flex justify-center">
               <ReservationCash
                 label="Cash"
                 style="bg-[#C7AC81] text-lg px-15 py-5"
