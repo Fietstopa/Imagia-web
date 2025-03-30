@@ -12,23 +12,19 @@ const PromoPageOne = () => {
         classProps="text-center md:text-6xl!"
       />
 
-      {/* Flex container: na mobilu se zobrazí jako sloupec (obrázek, text, obrázek),
-          na md+ jako řádek */}
-      <div className="grid-cols-1 sm:grid-cols-3  grid gap-10 px-5">
-        {/* První obrázek: animuje se zleva */}
+      <div className="grid-cols-1 sm:grid-cols-3 grid gap-10 px-5 overflow-hidden">
         <motion.img
           src={f1}
           alt="Photo 1"
-          className="md:pt-20"
+          className="md:pt-20 p-10"
           initial={{ x: -150, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         />
 
-        {/* Text: animuje se zespodu */}
         <motion.p
-          className="text-base lg:text-lg text-[#777777] font-[Montserrat] leading-relaxed max-w-md text-center md:text-left"
+          className="text-base lg:text-lg text-[#777777] font-[Montserrat] leading-relaxed  text-center "
           initial={{ y: 150, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -54,7 +50,7 @@ const PromoPageOne = () => {
         <motion.img
           src={f2}
           alt="Photo 2"
-          className=" md:pt-20"
+          className=" md:pt-20  p-10"
           initial={{ x: 150, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
