@@ -29,7 +29,7 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((img, idx) => (
-          <div key={idx} className="w-screen h-full flex-shrink-0">
+          <div key={idx} className="w-full h-full flex-shrink-0">
             <img
               src={img}
               alt={`Slide ${idx + 1}`}
