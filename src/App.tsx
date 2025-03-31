@@ -7,7 +7,7 @@ import Gallery from "./pages/GalleryPage";
 import Footer from "./components/Footer";
 import Room1 from "./pages/Room1";
 import Room2 from "./pages/Room2";
-import Coupons from "./pages/Coupons";
+import Coupons from "./pages/coupons";
 function App() {
   return (
     <BrowserRouter>
