@@ -8,6 +8,7 @@ interface ImageSwitcherProps {
   caption: String;
   undertext: String;
   description: String;
+  btnText: String;
 }
 
 interface WelcomeSignProps {}
@@ -18,6 +19,7 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
   caption,
   undertext,
   description,
+  btnText,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [image1, image2, image3];
@@ -52,6 +54,7 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
           captureText={caption}
           magicText={undertext}
           desc={description}
+          buttonText={btnText}
         />
       </div>
 

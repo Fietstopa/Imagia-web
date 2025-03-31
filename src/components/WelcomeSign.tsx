@@ -40,11 +40,13 @@ interface WelcomeSignProps {
   captureText: String;
   magicText: String;
   desc: String;
+  buttonText: String;
 }
 const WelcomeSign: React.FC<WelcomeSignProps> = ({
   captureText,
   magicText,
   desc,
+  buttonText,
 }) => {
   // const captureText = "„Fotografie má být odrazem ";
   // const magicText = "duše“";
@@ -85,7 +87,7 @@ const WelcomeSign: React.FC<WelcomeSignProps> = ({
 
       <Link to="/reservation" className="w-fit">
         <p className="px-6 py-3 sm:px-10 sm:py-4 transition outline-[#C6B081]/50 text-[#C6B081] hover:text-white outline outline-solid duration-500 hover:bg-[#C6B081]">
-          Vytvorit rezervaci
+          {buttonText}
         </p>
       </Link>
     </div>

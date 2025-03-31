@@ -4,18 +4,21 @@ import { getCalApi } from "@calcom/embed-react";
 import logo from "/images/logo.png";
 import "../styles/navbar.css";
 import IconLoader from "./iconLoader";
-
+import LanguageSwitcher from "./languageSwithcher";
+import { useTranslation } from "react-i18next";
 // Import both icons
 import bars from "/bars.svg";
 import close from "/close.svg";
 
 const Navbar = () => {
+  const { t } = useTranslation(); // Přidáno pro překlady
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const location = useLocation();
   const pathname = location.pathname;
   const isGalleryPage = pathname === "/gallery" || pathname === "/coupons";
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 200);
@@ -41,27 +44,27 @@ const Navbar = () => {
       <Link to="/">
         <img src={logo} alt="Logo" className="h-15" />
       </Link>
-      <div className="hidden md:flex text-lg font-bold   text-white  gap-15">
+      <div className="hidden md:flex text-lg font-bold text-white gap-15">
         <Link
           to="/"
           className={`${
             pathname === "/"
-              ? "border-b-2 content-center   border-[#C7AC81]"
+              ? "border-b-2 content-center border-[#C7AC81]"
               : "content-center"
           } pb-1 transition`}
         >
-          Home
+          {t("navbar.home")}
         </Link>
 
         <Link
           to="/gallery"
           className={`${
             pathname === "/gallery"
-              ? "border-b-2 content-center  border-[#C7AC81]"
+              ? "border-b-2 content-center border-[#C7AC81]"
               : "content-center"
           } pb-1 transition`}
         >
-          Galerie
+          {t("navbar.gallery")}
         </Link>
 
         <Link
@@ -72,7 +75,7 @@ const Navbar = () => {
               : "content-center"
           } pb-1 transition`}
         >
-          Sál 1
+          {t("navbar.room1")}
         </Link>
 
         <Link
@@ -83,7 +86,7 @@ const Navbar = () => {
               : "content-center"
           } pb-1 transition`}
         >
-          Sál 2
+          {t("navbar.room2")}
         </Link>
 
         <Link
@@ -94,14 +97,15 @@ const Navbar = () => {
               : "content-center"
           } pb-1 transition`}
         >
-          Dárkové kupony
+          {t("navbar.coupons")}
         </Link>
       </div>
 
-      <div className="flex items-center  text-white">
+      <div className="flex items-center gap-10 text-white">
+        <LanguageSwitcher />
         <Link to="/reservation">
           <button className="bg-[#C7AC81] px-3 py-2 text-lg cursor-pointer">
-            Rezervace
+            {t("navbar.reservation")}
           </button>
         </Link>
 
@@ -120,25 +124,25 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden absolute top-25 border-t-1 left-0 w-screen bg-black shadow-lg flex flex-col text-white ">
+        <div className="md:hidden absolute top-25 border-t-1 left-0 w-screen bg-black shadow-lg flex flex-col text-white">
           <Link
             to="/"
             onClick={() => setMenuOpen(false)}
             className="w-full border-b border-white text-center py-2"
           >
-            Home
+            {t("navbar.home")}
           </Link>
           <Link
             to="/gallery"
             onClick={() => setMenuOpen(false)}
             className="w-full border-b border-white text-center py-2"
           >
-            Galerie
+            {t("navbar.gallery")}
           </Link>
           <p className="w-full border-b border-white text-center py-2">
-            Room 1
+            {t("navbar.room1")}
           </p>
-          <p className="w-full text-center py-2">Room 2</p>
+          <p className="w-full text-center py-2">{t("navbar.room2")}</p>
         </div>
       )}
     </nav>
