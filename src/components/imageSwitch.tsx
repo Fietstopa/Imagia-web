@@ -5,12 +5,19 @@ interface ImageSwitcherProps {
   image1: string;
   image2: string;
   image3: string;
+  caption: String;
+  undertext: String;
+  description: String;
 }
 
+interface WelcomeSignProps {}
 const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
   image1,
   image2,
   image3,
+  caption,
+  undertext,
+  description,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [image1, image2, image3];
@@ -41,7 +48,11 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
 
       {/* WelcomeSign */}
       <div className="absolute text-white left-10 bottom-40 flex items-center justify-center z-20">
-        <WelcomeSign />
+        <WelcomeSign
+          captureText={caption}
+          magicText={undertext}
+          desc={description}
+        />
       </div>
 
       {/* Overlay */}

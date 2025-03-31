@@ -14,8 +14,8 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const location = useLocation();
-  const isGalleryPage = location.pathname === "/gallery";
-
+  const pathname = location.pathname;
+  const isGalleryPage = pathname === "/gallery" || pathname === "/coupons";
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 200);
@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-between z-[999] transition-all duration-300 px-5 py-3  ${
+      className={`fixed top-0 left-0 w-full flex items-stretch justify-between z-[999] transition-all duration-300 px-30 py-3  ${
         isScrolled || isGalleryPage ? "bg-black shadow-lg" : "bg-transparent"
       }`}
     >
@@ -41,21 +41,67 @@ const Navbar = () => {
       <Link to="/">
         <img src={logo} alt="Logo" className="h-15" />
       </Link>
+      <div className="hidden md:flex text-lg font-bold   text-white  gap-15">
+        <Link
+          to="/"
+          className={`${
+            pathname === "/"
+              ? "border-b-2 content-center   border-[#C7AC81]"
+              : "content-center"
+          } pb-1 transition`}
+        >
+          Home
+        </Link>
 
-      {/* Right Side: Desktop + Mobile */}
-      <div className="flex items-center gap-5 text-white">
-        {/* Desktop Menu Items (hidden on smaller screens) */}
-        <div className="hidden md:flex items-center gap-10">
-          <Link to="/">Home</Link>
-          <Link to="/gallery">Gallery</Link>
-          <p>Room 1</p>
-          <p>Room 2</p>
-        </div>
+        <Link
+          to="/gallery"
+          className={`${
+            pathname === "/gallery"
+              ? "border-b-2 content-center  border-[#C7AC81]"
+              : "content-center"
+          } pb-1 transition`}
+        >
+          Galerie
+        </Link>
 
-        {/* Reservation Button (always visible) */}
+        <Link
+          to="/room1"
+          className={`${
+            pathname === "/room1"
+              ? "border-b-2 border-[#C7AC81] content-center"
+              : "content-center"
+          } pb-1 transition`}
+        >
+          Sál 1
+        </Link>
+
+        <Link
+          to="/room2"
+          className={`${
+            pathname === "/room2"
+              ? "border-b-2 content-center border-[#C7AC81]"
+              : "content-center"
+          } pb-1 transition`}
+        >
+          Sál 2
+        </Link>
+
+        <Link
+          to="/coupons"
+          className={`${
+            pathname === "/coupons"
+              ? "border-b-2 border-[#C7AC81] content-center"
+              : "content-center"
+          } pb-1 transition`}
+        >
+          Dárkové kupony
+        </Link>
+      </div>
+
+      <div className="flex items-center  text-white">
         <Link to="/reservation">
-          <button className="bg-[#C7AC81] px-3 py-2 cursor-pointer">
-            Reservation
+          <button className="bg-[#C7AC81] px-3 py-2 text-lg cursor-pointer">
+            Rezervace
           </button>
         </Link>
 
@@ -87,7 +133,7 @@ const Navbar = () => {
             onClick={() => setMenuOpen(false)}
             className="w-full border-b border-white text-center py-2"
           >
-            Gallery
+            Galerie
           </Link>
           <p className="w-full border-b border-white text-center py-2">
             Room 1

@@ -40,14 +40,14 @@ const PromoPageOne = () => {
           s osobním a přívětivým přístupem – ideální pro portréty, rodinná
           focení nebo profesionální snímky. Přijet k nám je snadné: stačí
           naskočit na{" "}
-          <span className="relative inline-block group text-[#C6B081] underline cursor-pointer">
-            tramvaj číslo 9
-            <img
-              src={mapimage}
-              alt="Mapa"
-              className="hidden group-hover:block absolute top-[-160px] left-1/2 -translate-x-1/2 w-[500px] h-auto rounded-lg shadow-lg border border-gray-300 z-50"
-            />
-          </span>
+          <a className="relative group text-[#C6AB81] font-bold underline cursor-pointer">
+            Tramvaj číslo 9{" "}
+            <span className="absolute hidden group-hover:block top-7 left-1/2 -translate-x-1/2 w-[450px] text-white text-sm font-sans px-3 py-2  bg-[#1F1A16] shadow-lg z-50">
+              <span className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 "></span>
+              <p>Cesta z ul. České k nám</p>
+              <img src={mapimage} alt="" />
+            </span>
+          </a>
           a jste doslova pár kroků od našich dveří. <br /> <br />
           Ať už chcete zachytit výjimečné vzpomínky, nebo vytvořit něco
           uměleckého, Imagia je to pravé místo, kde vaše vize ožívají. Už se

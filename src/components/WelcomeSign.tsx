@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "../styles/imgSwitch.css";
+import { desc } from "framer-motion/client";
 interface FlipLetterProps {
   letter: string;
   index: number;
@@ -35,10 +36,18 @@ const FlipLetter: React.FC<FlipLetterProps> = ({ letter, index }) => (
     </motion.span>
   </span>
 );
-
-const WelcomeSign = () => {
-  const captureText = "„Fotografie má být odrazem ";
-  const magicText = "duše“";
+interface WelcomeSignProps {
+  captureText: String;
+  magicText: String;
+  desc: String;
+}
+const WelcomeSign: React.FC<WelcomeSignProps> = ({
+  captureText,
+  magicText,
+  desc,
+}) => {
+  // const captureText = "„Fotografie má být odrazem ";
+  // const magicText = "duše“";
 
   return (
     <div className="w-full max-w-[1000px] px-4 md:px-8 flex flex-col items-start gap-8 ">
@@ -69,8 +78,9 @@ const WelcomeSign = () => {
       </div>
 
       <p className="text-sm sm:text-base md:text-lg text-[#C3C1B6] max-w-[600px] w-full">
-        „Zachycujeme skutečné momenty s citem pro detail. Přirozeně,
-        profesionálně a s důrazem na atmosféru.“
+        {/* „Zachycujeme skutečné momenty s citem pro detail. Přirozeně,
+        profesionálně a s důrazem na atmosféru.“ */}
+        {desc}
       </p>
 
       <Link to="/reservation" className="w-fit">
