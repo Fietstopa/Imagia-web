@@ -22,7 +22,7 @@ const Home = () => {
           name="description"
           content="Objevte ateliér Imagia v Brně – prostor pro profesionální focení portrétů, rodinných a uměleckých snímků. Každý snímek má u nás smysl!"
         />
-        <link rel="canonical" href="https://www.tvujweb.cz" />
+        <link rel="canonical" href="https://www.imagiafotostudio.cz" />
       </Helmet>
       <ImageSwitcher
         image1={imageUrl1}
