@@ -48,7 +48,7 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
       </div>
 
       {/* WelcomeSign with responsive positioning */}
-      <div className="absolute text-white pl-2 bottom-20 md:left-10 md:bottom-40 flex items-center justify-center z-20">
+      <div className="absolute text-white pl-2 bottom-20 md:left-10 md:bottom-40 z-20 left-2 right-2 max-w-[95vw]">
         <WelcomeSign
           captureText={caption}
           magicText={undertext}
