@@ -17,7 +17,7 @@ const Home = () => {
         <html lang="cs" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Foto Brno - Imagia Ateliér</title>
+        <title>Imagia fotoateliér</title>
         <meta
           name="description"
           content="Objevte ateliér Imagia v Brně – prostor pro profesionální focení portrétů, rodinných a uměleckých snímků. Každý snímek má u nás smysl!"

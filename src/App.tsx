@@ -12,9 +12,6 @@ import Coupons from "./pages/Coupons";
 function App() {
   return (
     <BrowserRouter>
-      <Helmet>
-        <title>Fot</title>
-      </Helmet>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

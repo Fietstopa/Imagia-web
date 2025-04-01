@@ -5,9 +5,36 @@ import imageUrl2 from "../../public/images/interior/7.jpg";
 import imageUrl3 from "../../public/images/interior/12.jpg";
 import CustomCaption from "@/components/CustomCaption";
 import photoLeft from "https://img.myloview.cz/obrazy/large-photo-studio-with-lighting-equipment-close-up-400-167426839.jpg";
+import { Helmet } from "react-helmet";
+
 const Room1 = () => {
   return (
     <div className="">
+      <Helmet>
+        <title>Sál Arch Deco – Pronájem fotostudia Brno | Imagia</title>
+        <meta
+          name="description"
+          content="Pronájem elegantního ateliéru v Brně – Sál Arch Deco ve studiu Imagia. Styl art deco, jemné světlo, ideální pro portréty a umělecké focení."
+        />
+        <link rel="canonical" href="https://www.imagiafotostudio.cz/room1" />
+        <meta
+          property="og:title"
+          content="Sál Arch Deco – Fotostudio Imagia Brno"
+        />
+        <meta
+          property="og:description"
+          content="Stylový sál pro focení v Brně. Art deco atmosféra, měkké světlo, perfektní pro profesionální fotografie. Objevte Imagia fotostudio."
+        />
+        <meta
+          property="og:image"
+          content="https://www.imagiafotostudio.cz/images/interior/1.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.imagiafotostudio.cz/room1"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <ImageSwitcher
         image1={imageUrl1}
         image2={imageUrl2}
@@ -15,6 +42,7 @@ const Room1 = () => {
         caption="Arch deco "
         undertext={"sál"}
         description={`„Arch Deco je elegantní prostor inspirovaný stylem art deco, kde dominují jemné oblouky a měkké světlo. Ideální pro portréty i umělecké focení s nádechem nadčasové estetiky.“`}
+        btnText={"rezervace"}
       />
 
       <div className="h-screen flex flex-col justify-center items-center">
