@@ -17,7 +17,7 @@ const Footer = () => {
           <iframe
             className="border-[#c6b081]-2"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162.9394234712106!2d16.61039381027796!3d49.19997573970132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471295b6f1efd719%3A0xb7890a6d9e9805d!2sImagia%20fotoateli%C3%A9r!5e0!3m2!1scs!2scz!4v1743525884309!5m2!1scs!2scz"
-            width="400"
+            width="350"
             height="200"
             style={{ border: 0 }}
             loading="lazy"
