@@ -12,6 +12,7 @@ interface ImageSwitcherProps {
 }
 
 interface WelcomeSignProps {}
+
 const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
   image1,
   image2,
@@ -30,11 +31,9 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
 
   return (
     <div className="relative h-dvh w-full overflow-x-hidden">
+      {/* Image slider container */}
       <div
-        // Wrap your transition classes with `md:` so they only apply on md+ screens
-        className={`flex w-full h-full 
-          md:transition-transform md:duration-700 md:ease-in-out
-        `}
+        className={`flex w-full h-full transition-transform duration-700 ease-in-out`}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((img, idx) => (
@@ -48,8 +47,8 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
         ))}
       </div>
 
-      {/* WelcomeSign */}
-      <div className="absolute text-white left-10 bottom-40 flex items-center justify-center z-20">
+      {/* WelcomeSign with responsive positioning */}
+      <div className="absolute text-white left-5 bottom-20 md:left-10 md:bottom-40 flex items-center justify-center z-20">
         <WelcomeSign
           captureText={caption}
           magicText={undertext}
@@ -61,23 +60,27 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
-      {/* Dots / Buttons */}
-      <div className="absolute bottom-5 right-0 flex space-x-3 z-10 translate-x-[-50%]">
+      {/* Responsive dots/buttons */}
+      <div className="absolute bottom-5 right-0 flex space-x-2 md:space-x-3 z-10 translate-x-[-50%]">
         {images.map((_, idx) => (
           <button
             key={idx}
             onClick={() => handleIndexChange(idx)}
             className={`
-              p-4
+              p-2 md:p-3
               text-white
               rounded-full
               cursor-pointer
-              ${currentIndex === idx ? "bg-[#C6AB81]" : "bg-transparent"}
+              transition-colors
+              ${currentIndex === idx ? "bg-[#C6AB81]" : "bg-white/50"}
             `}
+            aria-label={`Go to slide ${idx + 1}`}
           >
-            <div className="w-5 h-5 flex items-center justify-center">
+            {/* Mobile: small dots, Desktop: numbers */}
+            <div className="hidden md:block w-4 h-4 md:w-5 md:h-5 text-sm md:text-base">
               {idx + 1}
             </div>
+            <div className="md:hidden w-2 h-2 bg-current rounded-full" />
           </button>
         ))}
       </div>

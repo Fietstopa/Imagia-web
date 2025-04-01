@@ -1,18 +1,20 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "../styles/imgSwitch.css";
-import { desc } from "framer-motion/client";
+
 interface FlipLetterProps {
   letter: string;
   index: number;
 }
+
 const DURATION = 0.45;
 const STAGGER = 0.025;
+
 const FlipLetter: React.FC<FlipLetterProps> = ({ letter, index }) => (
   <span className="relative inline-block overflow-hidden">
     <motion.span
       initial={{ y: 0 }}
-      animate={{ y: "-150%" }} // schová se výš
+      animate={{ y: "-150%" }}
       transition={{
         duration: DURATION,
         ease: "easeInOut",
@@ -23,7 +25,7 @@ const FlipLetter: React.FC<FlipLetterProps> = ({ letter, index }) => (
       {letter}
     </motion.span>
     <motion.span
-      initial={{ y: "150%" }} // přiletí zespodu výš
+      initial={{ y: "150%" }}
       animate={{ y: 0 }}
       transition={{
         duration: DURATION,
@@ -36,25 +38,25 @@ const FlipLetter: React.FC<FlipLetterProps> = ({ letter, index }) => (
     </motion.span>
   </span>
 );
+
 interface WelcomeSignProps {
   captureText: String;
   magicText: String;
   desc: String;
   buttonText: String;
 }
+
 const WelcomeSign: React.FC<WelcomeSignProps> = ({
   captureText,
   magicText,
   desc,
   buttonText,
 }) => {
-  // const captureText = "„Fotografie má být odrazem ";
-  // const magicText = "duše“";
-
   return (
-    <div className="w-full max-w-[1000px] px-4 md:px-8 flex flex-col items-start gap-8 ">
-      <div className="flex items-center">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-[Literata] flex ">
+    <div className="w-full max-w-[1400px] px-2 sm:px-4 md:px-8 flex flex-col items-start gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+      {/* Upravený header container pro responzivitu */}
+      <div className="flex  xs:flex-row xs:items-baseline gap-1 xs:gap-2">
+        <h1 className="text-1xl xs:text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-[Literata] flex">
           {captureText.split("").map((letter, index) => (
             <FlipLetter
               key={index}
@@ -64,9 +66,8 @@ const WelcomeSign: React.FC<WelcomeSignProps> = ({
           ))}
         </h1>
 
-        {/* MAGIC TEXT - flies in from the right */}
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-7xl font-[Literata] text-[#C6B081] ml-2"
+          className="text-1xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[Literata] text-[#C6B081] xs:ml-1 sm:ml-2"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{
@@ -79,14 +80,19 @@ const WelcomeSign: React.FC<WelcomeSignProps> = ({
         </motion.h1>
       </div>
 
-      <p className="text-sm sm:text-base md:text-lg text-[#C3C1B6] max-w-[600px] w-full">
-        {/* „Zachycujeme skutečné momenty s citem pro detail. Přirozeně,
-        profesionálně a s důrazem na atmosféru.“ */}
+      {/* Upravený popisek pro responzivitu */}
+      <p className="text-xs xs:text-sm sm:text-base md:text-lg text-[#C3C1B6] w-full max-w-full sm:max-w-[600px]">
         {desc}
       </p>
 
+      {/* Responzivní tlačítko */}
       <Link to="/reservation" className="w-fit">
-        <p className="px-6 py-3 sm:px-10 sm:py-4 transition outline-[#C6B081]/50 text-[#C6B081] hover:text-white outline outline-solid duration-500 hover:bg-[#C6B081]">
+        <p
+          className="px-3 py-1 xs:px-4 xs:py-2 sm:px-6 sm:py-3 md:px-10 md:py-4 
+          transition outline-[#C6B081]/50 text-[#C6B081] hover:text-white 
+          outline outline-solid duration-500 hover:bg-[#C6B081] 
+          text-xs xs:text-sm sm:text-base"
+        >
           {buttonText}
         </p>
       </Link>

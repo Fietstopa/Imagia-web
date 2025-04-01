@@ -13,7 +13,16 @@ const Footer = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
         {/* Logo */}
         <div className="flex flex-col items-center sm:items-start">
-          <img src={imagia} alt="Logo" className="w-32 mb-2" />
+          {/* <img src={imagia} alt="Logo" className="w-32 mb-2" /> */}
+          <iframe
+            className="border-[#c6b081]-2"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162.9394234712106!2d16.61039381027796!3d49.19997573970132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471295b6f1efd719%3A0xb7890a6d9e9805d!2sImagia%20fotoateli%C3%A9r!5e0!3m2!1scs!2scz!4v1743525884309!5m2!1scs!2scz"
+            width="400"
+            height="200"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
 
         {/* Navigation */}
@@ -35,7 +44,7 @@ const Footer = () => {
 
         {/* Socials */}
         <div className="flex flex-col gap-2">
-          <h3 className="text-lg font-semibold">Contact</h3>
+          <h3 className="text-lg font-semibold">Social</h3>
           <a
             href="https://www.instagram.com/imagia.fotoatelier/"
             className="text-gray-400 flex hover:text-white"
@@ -63,6 +72,10 @@ const Footer = () => {
             <a href="#" className="text-gray-400 flex hover:text-white">
               <IconLoader link={email} styles="pr-2" />
               imagia.atelier@gmail.com
+            </a>
+            <a href="#" className="text-gray-400 flex hover:text-white">
+              <IconLoader link={email} styles="pr-2" />
+              Milady Horákové 2031/1{" "}
             </a>
           </div>
         </div>

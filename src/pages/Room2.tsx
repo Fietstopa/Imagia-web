@@ -4,45 +4,33 @@ import imageUrl1 from "../../public/images/interior/1.jpg";
 import imageUrl2 from "../../public/images/interior/7.jpg";
 import imageUrl3 from "../../public/images/interior/12.jpg";
 import CustomCaption from "@/components/CustomCaption";
-import photoLeft from "https://img.myloview.cz/obrazy/large-photo-studio-with-lighting-equipment-close-up-400-167426839.jpg";
+
 const Room2 = () => {
   return (
-    <div className="">
+    <div>
       <ImageSwitcher
         image1={imageUrl1}
         image2={imageUrl2}
         image3={imageUrl3}
         caption="Victorian White "
-        undertext={"sál"}
-        description={`„Arch Deco je elegantní prostor inspirovaný stylem art deco, kde dominují jemné oblouky a měkké světlo. Ideální pro portréty i umělecké focení s nádechem nadčasové estetiky.“`}
+        undertext="sál"
+        description={`Arch Deco je elegantní ateliér inspirovaný stylem art deco. Dominují v něm jemné oblouky, měkké světlo a nadčasová atmosféra. Ideální prostor pro portréty i umělecké focení.`}
+        btnText="Rezervace"
       />
 
       <div className="h-screen flex flex-col justify-center items-center">
-        {" "}
         <CustomCaption
-          title="Světlo a prostor"
-          subtitle="Každý oblouk má svůj význam"
+          title="Připravujeme pro vás nový sál"
+          subtitle="Máte se na co těšit!"
           classProps="!py-20"
-        ></CustomCaption>
-        <div className=" gap-40 grid grid-cols-[2fr_3fr] pb-20 px-50">
-          <img src={imageUrl1} alt="" className="" />
-          <p className="text-base lg:text-lg text-[#777777] font-[Montserrat] leading-relaxed text-left relative">
-            Sál Arch Deco je elegantní prostor inspirovaný nadčasovým stylem art
-            deco, kde dominují jemné oblouky, měkké světlo a promyšlená
-            kompozice. <br />
-            <br />
-            Je ideální pro portrétní, párové i umělecké focení a působí
-            přirozeně, přesto stylově. Každý detail byl navržen tak, aby
-            podporoval vizuální harmonii a vytvářel příjemnou, inspirativní
-            atmosféru. <br />
-            <br />
-            Díky předchozí domluvě nabízíme možnost{" "}
-            <span className="font-bold">
-              přizpůsobení sálu vašim konkrétním potřebám{" "}
-            </span>
-            – ať už jde o přesun nábytku, změnu dekorací, nebo úpravu světelného
-            nastavení. Vaše vize je pro nás klíčová a rádi vám pomůžeme vytvořit
-            ideální prostředí pro váš projekt.
+        />
+        <div className="gap-40 grid grid-cols-[2fr_3fr] pb-20 px-50">
+          <img src={imageUrl1} alt="Victorian White interiér" />
+          <p className="text-base lg:text-lg text-[#777777] font-[Montserrat] leading-relaxed text-left">
+            Právě dokončujeme poslední detaily tohoto krásného prostoru. Už brzy
+            bude otevřený pro vaše focení. Sledujte nás, ať vám neuteče jeho
+            slavnostní spuštění. Bude to místo plné světla, elegance a
+            inspirace. Těšíme se, až ho naplníte svými nápady a příběhy.
           </p>
         </div>
       </div>
