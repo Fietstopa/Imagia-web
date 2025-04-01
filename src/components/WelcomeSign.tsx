@@ -91,7 +91,7 @@ const WelcomeSign: React.FC<WelcomeSignProps> = ({
           className="px-3 py-1 xs:px-4 xs:py-2 sm:px-6 sm:py-3 md:px-10 md:py-4 
           transition outline-[#C6B081]/50 text-[#C6B081] hover:text-white 
           outline outline-solid duration-500 hover:bg-[#C6B081] 
-          text-base xs:text-lg sm:text-base"
+          text-base xs:text-base sm:text-base"
         >
           {buttonText}
         </p>

@@ -33,8 +33,8 @@ const resources = {
         reservation: "Reservation",
       },
       home: {
-        caption: "Photography should be a reflection of the ",
-        secondaryCaption: " soul",
+        caption: "Photography is reflection of ",
+        secondaryCaption: "the soul",
         descriptionText:
           "“We capture real moments with an eye for detail. Naturally, professionally and with an emphasis on atmosphere.”",
         reservation: "Create Reservation",
@@ -53,7 +53,7 @@ const resources = {
         reservation: "Бронирование",
       },
       home: {
-        caption: "Фотография должна быть отражением ",
+        caption: "Фотография - отражение ",
         secondaryCaption: "души",
         descriptionText:
           "«Мы запечатлеваем настоящие моменты с чувством к деталям. Естественно, профессионально и с акцентом на атмосферу.»",
@@ -73,7 +73,7 @@ const resources = {
         reservation: "Бронювати",
       },
       home: {
-        caption: "Фотографія має бути відображенням ",
+        caption: "Фотографія - відображення ",
         secondaryCaption: "душі",
         descriptionText:
           "«Ми фіксуємо справжні моменти з увагою до деталей. Природно, професійно і з акцентом на атмосферу.»",
