@@ -55,8 +55,8 @@ const WelcomeSign: React.FC<WelcomeSignProps> = ({
   return (
     <div className="w-full max-w-[1400px] px-2 sm:px-4 md:px-8 flex flex-col items-start gap-3 sm:gap-4 md:gap-6 lg:gap-8">
       {/* Upravený header container pro responzivitu */}
-      <div className="flex  xs:flex-row xs:items-baseline gap-1 xs:gap-2">
-        <h1 className="text-1xl xs:text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-[Literata] flex">
+      <div className="flex flex-col  lg:flex-row xs:items-baseline gap-1 xs:gap-2">
+        <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[Literata] flex">
           {captureText.split("").map((letter, index) => (
             <FlipLetter
               key={index}
@@ -67,7 +67,7 @@ const WelcomeSign: React.FC<WelcomeSignProps> = ({
         </h1>
 
         <motion.h1
-          className="text-1xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[Literata] text-[#C6B081] xs:ml-1 sm:ml-2"
+          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-[Literata] text-[#C6B081] xs:ml-1 sm:ml-2"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{
@@ -81,7 +81,7 @@ const WelcomeSign: React.FC<WelcomeSignProps> = ({
       </div>
 
       {/* Upravený popisek pro responzivitu */}
-      <p className="text-xs xs:text-sm sm:text-base md:text-lg text-[#C3C1B6] w-full max-w-full sm:max-w-[600px]">
+      <p className="text-lg xs:text-lg sm:text-base md:text-xl text-[#C3C1B6] w-full max-w-full sm:max-w-[600px]">
         {desc}
       </p>
 
@@ -91,7 +91,7 @@ const WelcomeSign: React.FC<WelcomeSignProps> = ({
           className="px-3 py-1 xs:px-4 xs:py-2 sm:px-6 sm:py-3 md:px-10 md:py-4 
           transition outline-[#C6B081]/50 text-[#C6B081] hover:text-white 
           outline outline-solid duration-500 hover:bg-[#C6B081] 
-          text-xs xs:text-sm sm:text-base"
+          text-base xs:text-lg sm:text-base"
         >
           {buttonText}
         </p>

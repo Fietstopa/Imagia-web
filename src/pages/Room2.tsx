@@ -18,20 +18,28 @@ const Room2 = () => {
         btnText="Rezervace"
       />
 
-      <div className="h-screen flex flex-col justify-center items-center">
+      <div className="min-h-screen flex flex-col justify-center items-center py-8 md:py-20">
         <CustomCaption
           title="Připravujeme pro vás nový sál"
           subtitle="Máte se na co těšit!"
-          classProps="!py-20"
+          classProps="!py-10 md:!py-20"
         />
-        <div className="gap-40 grid grid-cols-[2fr_3fr] pb-20 px-50">
-          <img src={imageUrl1} alt="Victorian White interiér" />
-          <p className="text-base lg:text-lg text-[#777777] font-[Montserrat] leading-relaxed text-left">
-            Právě dokončujeme poslední detaily tohoto krásného prostoru. Už brzy
-            bude otevřený pro vaše focení. Sledujte nás, ať vám neuteče jeho
-            slavnostní spuštění. Bude to místo plné světla, elegance a
-            inspirace. Těšíme se, až ho naplníte svými nápady a příběhy.
-          </p>
+
+        <div className="w-full px-4 md:px-8 lg:px-16 xl:px-50">
+          <div className="flex flex-col md:grid md:grid-cols-[2fr_3fr] gap-6 md:gap-40 pb-8 md:pb-20">
+            <img
+              src={imageUrl1}
+              alt="Victorian White interiér"
+              className="w-full h-auto object-cover max-w-full mb-6 md:mb-0"
+            />
+
+            <p className="text-sm md:text-base lg:text-lg text-[#777777] font-[Montserrat] leading-relaxed text-left">
+              Právě dokončujeme poslední detaily tohoto krásného prostoru. Už
+              brzy bude otevřený pro vaše focení. Sledujte nás, ať vám neuteče
+              jeho slavnostní spuštění. Bude to místo plné světla, elegance a
+              inspirace. Těšíme se, až ho naplníte svými nápady a příběhy.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Room1 from "./pages/Room1";
 import Room2 from "./pages/Room2";
 import Coupons from "./pages/Coupons";
+import { h1 } from "framer-motion/client";
 
 function App() {
   return (
