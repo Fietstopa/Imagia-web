@@ -8,17 +8,17 @@ interface MansoryProps {
 const Mansory: React.FC<MansoryProps> = ({ imageUrls, colGap }) => {
   return (
     <div
-      className={` md:columns-2 lg:columns-3 xl:columns-4`}
-      style={{ columnGap: `${colGap}px` }}
+      className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      style={{ gap: `${colGap}px` }}
     >
       {imageUrls.map((img, i) => (
-        <img
-          key={i}
-          src={img}
-          className="image block w-full"
-          style={{ marginBottom: `${colGap}px` }}
-          alt={`image-${i}`}
-        />
+        <div key={i} className="aspect-square w-full overflow-hidden">
+          <img
+            src={img}
+            alt={`image-${i}`}
+            className="w-full h-full object-cover"
+          />
+        </div>
       ))}
     </div>
   );

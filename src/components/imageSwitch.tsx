@@ -41,7 +41,7 @@ const ImageSwitcher: React.FC<ImageSwitcherProps> = ({
             <img
               src={img}
               alt={`Slide ${idx + 1}`}
-              className="w-full h-full object-cover brightness-70"
+              className="w-full h-full object-cover brightness-60"
             />
           </div>
         ))}
