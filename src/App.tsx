@@ -9,6 +9,7 @@ import Room1 from "./pages/Room1";
 import Room2 from "./pages/Room2";
 import Coupons from "./pages/Coupons";
 import { h1 } from "framer-motion/client";
+import Rules from "./pages/Rules";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/room1" element={<Room1 />} />
         <Route path="/room2" element={<Room2 />} />
         <Route path="/coupons" element={<Coupons />} />
+        <Route path="/rules" element={<Rules />} />
       </Routes>
       <Footer />
     </BrowserRouter>

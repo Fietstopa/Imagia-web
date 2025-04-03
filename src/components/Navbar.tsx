@@ -16,7 +16,8 @@ const Navbar = () => {
 
   const location = useLocation();
   const pathname = location.pathname;
-  const isGalleryPage = pathname === "/gallery" || pathname === "/coupons";
+  const isGalleryPage =
+    pathname === "/gallery" || pathname === "/coupons" || pathname === "/rules";
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -54,7 +55,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex text-lg font-bold text-white gap-6 lg:gap-8 xl:gap-10 items-center">
+      <div className="hidden md:flex text-lg text-white gap-6 lg:gap-8 xl:gap-10 items-center">
         <NavLink to="/" pathname={pathname} label={t("navbar.home")} />
         <NavLink
           to="/gallery"
@@ -63,6 +64,7 @@ const Navbar = () => {
         />
         <NavLink to="/room1" pathname={pathname} label={t("navbar.room1")} />
         <NavLink to="/room2" pathname={pathname} label={t("navbar.room2")} />
+        <NavLink to="/rules" pathname={pathname} label="Pravidla" />
         <NavLink
           to="/coupons"
           pathname={pathname}
@@ -133,6 +135,15 @@ const Navbar = () => {
         >
           {t("navbar.coupons")}
         </Link>
+
+        <Link
+          to="/rules"
+          onClick={() => setMenuOpen(false)}
+          className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
+        >
+          Pravidla
+        </Link>
+
         <div className="">
           {" "}
           <LanguageSwitcher />
