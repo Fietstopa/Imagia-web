@@ -76,14 +76,14 @@ const ReservationPage = () => {
                   onClick={() => handleHourClick(2)}
                   className="bg-[#C7AC81] text-lg w-full md:w-1/2 py-3 cursor-pointer mx-auto"
                 >
-                  2 hodiny - 2 550 Kč
+                  2 hodiny - 2 500 Kč
                 </button>
                 <button
                   key={3}
                   onClick={() => handleHourClick(3)}
                   className="bg-[#C7AC81] text-lg w-full md:w-1/2 py-3 cursor-pointer mx-auto"
                 >
-                  3 hodiny - 3 750 Kč
+                  3 hodiny - 3 700 Kč
                 </button>
                 <button
                   key={4}
@@ -97,28 +97,28 @@ const ReservationPage = () => {
                   onClick={() => handleHourClick(5)}
                   className="bg-[#C7AC81] text-lg w-full md:w-1/2 py-3 cursor-pointer mx-auto"
                 >
-                  5 hodin - 6 000 Kč
+                  5 hodin - 6 100 Kč
                 </button>
                 <button
                   key={6}
                   onClick={() => handleHourClick(6)}
                   className="bg-[#C7AC81] text-lg w-full md:w-1/2 py-3 cursor-pointer mx-auto"
                 >
-                  6 hodin - 7 050 Kč
+                  6 hodin - 7 300 Kč
                 </button>
                 <button
                   key={7}
                   onClick={() => handleHourClick(7)}
                   className="bg-[#C7AC81] text-lg w-full md:w-1/2 py-3 cursor-pointer mx-auto"
                 >
-                  7 hodin - 8 050 Kč
+                  7 hodin - 8 500 Kč
                 </button>
                 <button
                   key={8}
                   onClick={() => handleHourClick(8)}
                   className="bg-[#C7AC81] text-lg w-full md:w-1/2 py-3 cursor-pointer mx-auto"
                 >
-                  8 hodin - 8 400 Kč
+                  8 hodin - 9 700 Kč
                 </button>
               </>
             )}
