@@ -42,11 +42,10 @@ const studioRules: StudioRule[] = [
     title: "Úklid a odpovědnost",
     content: `
       - Studio předávat v původním stavu
-      - Úklid provádět během pronájmu
       - Klient odpovídá za čistotu a stav vybavení
       - Poškození majetku hradí klient
       - Poplatek za znečištění papírových pozadí: 300 Kč/metr
-      - Úklidové poplatky dle sazeb studia
+      
     `,
   },
   {
