@@ -57,7 +57,7 @@ const Galerija = () => {
   ];
   return (
     <div className=" py-20">
-      <CustomCaption title="ARCH DECO " subtitle="SÁL" classProps="text-6xl" />
+      <CustomCaption title="ARCH DECO " subtitle="SÁL" classProps="text-4xl" />
       <MansoryDouble
         imageUrls={images}
         colGap={10}
