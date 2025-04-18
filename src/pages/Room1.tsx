@@ -7,7 +7,8 @@ import CustomCaption from "@/components/CustomCaption";
 import { Helmet } from "react-helmet";
 import ImageLeft from "/images/vertical/5.jpg"; // Nahraď reálnými cestami
 import ImageRight from "/images/vertical/6.jpg";
-import Mansory from "@/components/Mansory";
+import MansoryDd from "@/components/Mansory";
+import MansoryDouble from "@/components/MansoryDouble";
 const Room1 = () => {
   const images = [
     "/images/interior/1.jpg",
@@ -15,28 +16,11 @@ const Room1 = () => {
     "/images/interior/3.jpg",
     "/images/interior/4.jpg",
     "/images/interior/5.jpg",
+    "/images/interior/6.jpg",
     "/images/interior/7.jpg",
     "/images/interior/8.jpg",
     "/images/interior/9.jpg",
-    "/images/interior/11.jpg",
-    "/images/interior/12.jpg",
-    "/images/interior/13.jpg",
-    "/images/interior/14.jpg",
-    "/images/interior/15.jpg",
-    "/images/interior/16.jpg",
-    "/images/interior/17.jpg",
-    "/images/interior/18.jpg",
-    "/images/interior/19.jpg",
-    "/images/interior/20.jpg",
-    "/images/interior/21.jpg",
-    "/images/interior/22.jpg",
-    "/images/interior/23.jpg",
-    "/images/interior/24.jpg",
-    "/images/interior/25.jpg",
-    "/images/interior/27.jpg",
-    "/images/interior/28.jpg",
-    "/images/interior/29.jpg",
-    "/images/interior/30.jpg",
+    "/images/interior/10.jpg",
   ];
   return (
     <div className="bg-white">
@@ -129,7 +113,16 @@ const Room1 = () => {
         </div>
         <div className="px-10 p-20">
           {" "}
-          <Mansory imageUrls={images} colGap={10} />
+          <CustomCaption
+            title="Fotky z ateliéru"
+            subtitle=""
+            classProps="text-4xl"
+          />
+          <MansoryDouble
+            imageUrls={images}
+            colGap={10}
+            wideItems={[1, 5]}
+          ></MansoryDouble>
         </div>
       </div>
     </div>
