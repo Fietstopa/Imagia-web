@@ -63,13 +63,13 @@ const Galerija = () => {
         colGap={10}
         wideItems={[1, 5]}
       ></MansoryDouble>
-      <CustomCaption title="Látková" subtitle="pozadí" classProps="text-6xl" />
+      <CustomCaption title="Látková" subtitle="pozadí" classProps="text-4xl" />
       <Mansory imageUrls={textil} colGap={10} isVertical={false} />
-      <CustomCaption title="Lokace" subtitle="Valentyn" classProps="text-6xl" />
+      <CustomCaption title="Lokace" subtitle="Valentyn" classProps="text-4xl" />
       <Mansory imageUrls={valentyn} colGap={10} isVertical={true} />
-      <CustomCaption title="Lokace" subtitle="Jaro" classProps="text-6xl" />
+      <CustomCaption title="Lokace" subtitle="Jaro" classProps="text-4xl" />
       <Mansory imageUrls={jaro} colGap={10} />
-      <CustomCaption title="Lokace" subtitle="Vánoce" classProps="text-6xl" />
+      <CustomCaption title="Lokace" subtitle="Vánoce" classProps="text-4xl" />
       <Mansory imageUrls={newYear} colGap={10} isVertical={true} />
     </div>
   );
