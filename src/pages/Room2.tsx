@@ -2,7 +2,7 @@ import React from "react";
 import ImageSwitcher from "@/components/imageSwitch";
 import imageUrl1 from "../../public/images/room1/COMINGSOON.png";
 import imageUrl2 from "../../public/images/interior/7.jpg";
-import imageUrl3 from "../../public/images/interior/12.jpg";
+import imageUrl3 from "../../public/images/interior/9.jpg";
 import CustomCaption from "@/components/CustomCaption";
 
 const Room2 = () => {
@@ -12,8 +12,8 @@ const Room2 = () => {
         image1={imageUrl1}
         image2={imageUrl2}
         image3={imageUrl3}
-        caption="Victorian White "
-        undertext="sál"
+        caption="AURORA"
+        undertext="SÁL"
         description={`Arch Deco je elegantní ateliér inspirovaný stylem art deco. Dominují v něm jemné oblouky, měkké světlo a nadčasová atmosféra. Ideální prostor pro portréty i umělecké focení.`}
         btnText="Rezervace"
       />
@@ -34,10 +34,13 @@ const Room2 = () => {
             />
 
             <p className="text-sm md:text-base lg:text-lg text-[#777777] font-[Montserrat] leading-relaxed text-left">
-              Právě dokončujeme poslední detaily tohoto krásného prostoru. Už
-              brzy bude otevřený pro vaše focení. Sledujte nás, ať vám neuteče
-              jeho slavnostní spuštění. Bude to místo plné světla, elegance a
-              inspirace. Těšíme se, až ho naplníte svými nápady a příběhy.
+              Tenhle sál je fakt perla našeho studia. Jedinečná lehkost a
+              modernost interiéru dodají každému vašemu záběrů nádech elegance.
+              <br /> <br />
+              Krémový, útulný interiér, luxusní lustry a vintage křeslo
+              vytvářejí atmosféru, která je ideální pro focení.
+              <br /> <br /> Místnost je rozdělena na dvě velké části: ložnici a
+              obývací pokoj, což umožňuje focení různých stylů.
             </p>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import ImageSwitcher from "@/components/imageSwitch";
 import imageUrl1 from "../../public/images/interior/2.jpg";
 import imageUrl2 from "../../public/images/interior/7.jpg";
-import imageUrl3 from "../../public/images/interior/12.jpg";
+import imageUrl3 from "../../public/images/interior/9.jpg";
 import CustomCaption from "@/components/CustomCaption";
 import { Helmet } from "react-helmet";
 import ImageLeft from "/images/vertical/5.jpg"; // Nahraď reálnými cestami
@@ -52,8 +52,8 @@ const Room1 = () => {
         image1={imageUrl1}
         image2={imageUrl2}
         image3={imageUrl3}
-        caption="Arch Deco"
-        undertext="sál"
+        caption="ARCH DECO"
+        undertext="SÁL"
         description="Arch Deco je elegantní prostor, kde dominují jemné oblouky a měkké světlo.  Ideální prostředí pro portrétní i umělecké focení s nadčasovou atmosférou."
         btnText="Rezervace"
       />

@@ -3,10 +3,14 @@ import React from "react";
 interface MansoryProps {
   imageUrls: string[];
   colGap: number;
-  isVertical?: boolean;
+  wideItems?: number[]; // Array of indices that should be wider (2:1 ratio)
 }
 
-const Mansory: React.FC<MansoryProps> = ({ imageUrls, colGap, isVertical }) => {
+const MansoryDouble: React.FC<MansoryProps> = ({
+  imageUrls,
+  colGap,
+  wideItems = [],
+}) => {
   return (
     <div
       className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
@@ -15,9 +19,9 @@ const Mansory: React.FC<MansoryProps> = ({ imageUrls, colGap, isVertical }) => {
       {imageUrls.map((img, i) => (
         <div
           key={i}
-          className={`${
-            isVertical ? "aspect-2/3 " : "aspect-square "
-          }} w-full overflow-hidden`}
+          className={`w-full overflow-hidden ${
+            wideItems.includes(i) ? "col-span-2 aspect-[2/1]" : "aspect-square"
+          }`}
         >
           <img
             src={img}
@@ -30,4 +34,4 @@ const Mansory: React.FC<MansoryProps> = ({ imageUrls, colGap, isVertical }) => {
   );
 };
 
-export default Mansory;
+export default MansoryDouble;
