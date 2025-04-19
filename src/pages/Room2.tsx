@@ -14,7 +14,10 @@ const Room2 = () => {
         image3={imageUrl3}
         caption="AURORA"
         undertext="SÁL"
-        description={`Arch Deco je elegantní ateliér inspirovaný stylem art deco. Dominují v něm jemné oblouky, měkké světlo a nadčasová atmosféra. Ideální prostor pro portréty i umělecké focení.`}
+        description={` Tenhle sál je fakt perla našeho studia. Jedinečná lehkost a
+              modernost interiéru dodají každému vašemu záběrů nádech elegance.
+         
+             `}
         btnText="Rezervace"
       />
 
