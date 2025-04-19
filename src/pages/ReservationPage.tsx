@@ -35,7 +35,7 @@ const ReservationPage = () => {
       {!selectedStudio && (
         <div className="text-center my-10 w-full">
           <h2 className="md:text-7xl text-4xl pb-15 font-[Literata]">
-            Vyberte sal:
+            Vyberte sál:
           </h2>
           <div className="flex flex-col md:flex-row gap-10 m-auto justify-center items-center px-4 max-w-4xl">
             {/* Studio 1 Card */}
