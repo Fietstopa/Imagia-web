@@ -5,6 +5,7 @@ import phone from "/phone.svg";
 import fb from "/fb.svg";
 import email from "/email.svg";
 import IconLoader from "./iconLoader";
+import location from "/location.svg";
 
 const Footer = () => {
   return (
@@ -74,7 +75,7 @@ const Footer = () => {
               imagia.atelier@gmail.com
             </a>
             <a href="#" className="text-gray-400 flex hover:text-white">
-              <IconLoader link={email} styles="pr-2" />
+              <IconLoader link={location} styles="pr-2" />
               Milady Horákové 2031/1{" "}
             </a>
           </div>
