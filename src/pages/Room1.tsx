@@ -88,9 +88,7 @@ const Room1 = () => {
           </div>
           {/* Text */}
           <div className="flex flex-col font-[Montserrat] m-auto  ">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-              Vybaveni
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6">Popis</h2>
             <ul className="list-disc pl-5 text-lg space-y-2">
               <li>Rozloha: 40 m²</li>
               <li>Bílá podlaha</li>
