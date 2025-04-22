@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-stretch justify-between z-[99] transition-all duration-300 px-4 md:px-8 py-3 ${
+      className={`fixed top-0 left-0 font-[Montserrat] w-full flex items-stretch justify-between z-[99] transition-all duration-300 px-4 md:px-8 py-3 ${
         isScrolled || isGalleryPage ? "bg-black shadow-lg" : "bg-transparent"
       }`}
     >
