@@ -60,11 +60,12 @@ const Room1 = () => {
             <div className="text-sm md:text-base lg:text-lg text-[#555] font-[Montserrat] leading-relaxed space-y-6">
               <p>
                 Sál <strong>„Arch Deco“</strong> je ideálním místem pro
-                realizaci vašich kreativních nápadů. Spojuje minimalistický
-                interiér s praktickými prvky, jako jsou velká okna, texturovaná
-                zeď a pohodlná kožená pohovka. Využít můžete profesionální
-                vybavení – dýmový stroj, trvalá i záblesková světla, barevné
-                osvětlení a projektor Gobo.
+                realizaci vašich kreativních nápadů.
+                <br /> Spojuje minimalistický interiér s praktickými prvky, jako
+                jsou velká okna, texturovaná zeď a pohodlná kožená pohovka.
+                <br />
+                <br /> Využít můžete profesionální vybavení – dýmový stroj,
+                trvalá i záblesková světla, barevné osvětlení a projektor Gobo.
               </p>
               <p>
                 Perfektní pro <strong>svatební focení</strong>,{" "}
@@ -88,7 +89,9 @@ const Room1 = () => {
           </div>
           {/* Text */}
           <div className="flex flex-col font-[Montserrat] m-auto  ">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6">Popis</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              Popis sálu
+            </h2>
             <ul className="list-disc pl-5 text-lg space-y-2">
               <li>Rozloha: 40 m²</li>
               <li>Bílá podlaha</li>
