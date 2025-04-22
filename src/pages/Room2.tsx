@@ -58,7 +58,7 @@ const Room2 = () => {
             >
               <div className="text-[#777777] font-[Montserrat]  space-y-4 md:space-y-6 text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose">
                 <ul className="list-disc">
-                  <li> Tenhle sál je opavdu strong perlou našeho studia</li>
+                  <li> Tenhle sál je opavdu perlou našeho studia</li>
                   <li>
                     {" "}
                     Sál <strong>AURORA</strong> je jedinečná lehkost a modernost
