@@ -1,23 +1,25 @@
 import React from "react";
 import ImageSwitcher from "@/components/imageSwitch";
 import imageUrl1 from "../../public/images/room1/COMINGSOON.png";
+import bottomImage from "../../public/images/room1/3.jpg";
 import imageUrl2 from "../../public/images/interior/7.jpg";
 import imageUrl3 from "../../public/images/interior/9.jpg";
 import CustomCaption from "@/components/CustomCaption";
+import { motion } from "framer-motion"; // Přidán import motion
+import f1 from "../../public/images/room1/3.jpg"; // Přidány chybějící importy
+import f2 from "../../public/images/room1/4.jpg";
+import mapimage from "../../public/images/mapimage.jpg";
 
 const Room2 = () => {
   return (
     <div>
       <ImageSwitcher
         image1={imageUrl1}
-        image2={imageUrl2}
-        image3={imageUrl3}
+        image2={imageUrl1}
+        image3={imageUrl1}
         caption="AURORA"
         undertext="SÁL"
-        description={` Tenhle sál je fakt perla našeho studia. Jedinečná lehkost a
-              modernost interiéru dodají každému vašemu záběrů nádech elegance.
-         
-             `}
+        description={`Tenhle sál je opravdu perla našeho studia. Jedinečná lehkost a modernost interiéru dodají každému vašemu záběru nádech elegance.`}
         btnText="Rezervace"
       />
 
@@ -29,22 +31,76 @@ const Room2 = () => {
         />
 
         <div className="w-full px-4 md:px-8 lg:px-10 xl:px-20">
-          <div className="flex flex-col md:grid md:grid-cols-[1fr_1fr] gap-2 md:gap-20 pb-8 md:pb-20">
-            <img
-              src={imageUrl1}
-              alt="Victorian White interiér"
-              className="w-full h-auto object-cover max-w-full mb-6 md:mb-0"
-            />
+          <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-10 h-full">
+            {/* První obrázek - mobil nad textem, desktop vlevo */}
+            <motion.div
+              className="md:order-1 w-full h-[300px] md:h-auto relative"
+              initial={{ x: -150, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={f1}
+                alt="Fotoateliér v Brně – snímek z ateliéru Imagia"
+                className="w-full h-full object-cover  shadow-lg md:p-5 p-4"
+                loading="lazy"
+              />
+            </motion.div>
 
-            <p className="text-sm md:text-base lg:text-lg text-[#777777] font-[Montserrat] leading-relaxed text-left">
-              Tenhle sál je fakt perla našeho studia. Jedinečná lehkost a
-              modernost interiéru dodají každému vašemu záběrů nádech elegance.
-              <br /> <br />
-              Krémový, útulný interiér, luxusní lustry a vintage křeslo
-              vytvářejí atmosféru, která je ideální pro focení.
-              <br /> <br /> Místnost je rozdělena na dvě velké části: ložnici a
-              obývací pokoj, což umožňuje focení různých stylů.
-            </p>
+            {/* Textový obsah - mobil uprostřed, desktop uprostřed */}
+            <motion.div
+              className="md:order-2 flex items-center"
+              initial={{ y: 150, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-[#777777] font-[Montserrat]  space-y-4 md:space-y-6 text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose">
+                <ul className="list-disc">
+                  <li> Tenhle sál je opavdu strong perlou našeho studia</li>
+                  <li>
+                    {" "}
+                    Sál <strong>AURORA</strong> je jedinečná lehkost a modernost
+                    interiéru, jehož vintage detaily dodávají do každého záběru
+                    nádech eleganci
+                  </li>
+                  <li className="text-[#C7AC81]">
+                    {" "}
+                    <strong>70m² rozhloha, 3 velká okna, klasický styl</strong>
+                  </li>
+                  <li>
+                    Aurora je ideální volbou pro lidi, kteří milují estetiku
+                  </li>
+                  <li>
+                    {" "}
+                    Místnost jé rozdělena na dvě velké časti: ložnici a obývací
+                    pokoj, což umožňuje focení různých stylů.
+                  </li>
+                  <li>
+                    {" "}
+                    V sale budete mit možnost fotit s denním světlem a také s
+                    profesionálním vybavením GODOX, APATURE a NANLITE.
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Druhý obrázek - mobil pod textem, desktop vpravo */}
+            <motion.div
+              className="md:order-3 w-full h-[300px] md:h-auto relative"
+              initial={{ x: 150, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={f2}
+                alt="Druhý snímek z ateliéru Imagia v Brně"
+                className="w-full h-full object-cover  shadow-lg md:p-5 p-4"
+                loading="lazy"
+              />
+            </motion.div>
           </div>
         </div>
       </div>
