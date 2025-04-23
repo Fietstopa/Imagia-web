@@ -11,7 +11,7 @@ const DURATION = 0.45;
 const STAGGER = 0.025;
 
 const FlipLetter: React.FC<FlipLetterProps> = ({ letter, index }) => (
-  <span className="relative inline-block overflow-hidden">
+  <span className="relative py-2 inline-block overflow-hidden">
     <motion.span
       initial={{ y: 0 }}
       animate={{ y: "-150%" }}
