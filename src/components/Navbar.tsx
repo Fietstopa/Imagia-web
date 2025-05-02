@@ -64,6 +64,7 @@ const Navbar = () => {
         />
         <NavLink to="/room1" pathname={pathname} label={t("navbar.room1")} />
         <NavLink to="/room2" pathname={pathname} label={t("navbar.room2")} />
+        <NavLink to="/room3" pathname={pathname} label={t("navbar.room3")} />
         <NavLink to="/rules" pathname={pathname} label="Pravidla" />
         <NavLink
           to="/coupons"
@@ -143,7 +144,13 @@ const Navbar = () => {
         >
           Pravidla
         </Link>
-
+        <Link
+          to="/rules"
+          onClick={() => setMenuOpen(false)}
+          className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
+        >
+          Pravidla
+        </Link>
         <div className="">
           {" "}
           <LanguageSwitcher />

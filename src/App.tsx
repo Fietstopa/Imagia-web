@@ -12,6 +12,7 @@ import Room2 from "./pages/Room2";
 import Coupons from "./pages/Coupons";
 import { h1 } from "framer-motion/client";
 import Rules from "./pages/Rules";
+import Room3 from "./pages/Room3";
 
 // ScrollToTop komponenta
 function ScrollToTop() {
@@ -35,6 +36,8 @@ function App() {
         <Route path="/reservation" element={<ReservationPage />} />
         <Route path="/room1" element={<Room1 />} />
         <Route path="/room2" element={<Room2 />} />
+        <Route path="/room3" element={<Room3 />} />
+
         <Route path="/coupons" element={<Coupons />} />
         <Route path="/rules" element={<Rules />} />
       </Routes>
