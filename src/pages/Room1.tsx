@@ -2,7 +2,7 @@ import React from "react";
 import ImageSwitcher from "@/components/imageSwitch";
 import imageUrl1 from "../../public/images/interior/2.jpg";
 import imageUrl2 from "../../public/images/interior/5.jpg";
-import imageUrl3 from "../../public/images/interior/6.jpg";
+import imageUrl3 from "../../public/images/interior/11.jpg";
 import CustomCaption from "@/components/CustomCaption";
 import { Helmet } from "react-helmet";
 import ImageLeft from "/images/vertical/5.jpg"; // Nahraď reálnými cestami
