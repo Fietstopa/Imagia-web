@@ -55,7 +55,8 @@ const ReservationPage = () => {
                   Sál Arch Deco
                 </h3>
                 <p className="text-gray-300">
-                  Elegantní prostor s vintage atmosférou <br /> <br /> <br />
+                  Elegantní prostor se stylovým designem, moderním nábytkem a
+                  papírovými pozadí <br /> <br />
                 </p>
               </div>
             </button>
