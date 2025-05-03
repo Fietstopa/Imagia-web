@@ -165,14 +165,14 @@ const ReservationPage = () => {
                 ))
               : // Cash payment buttons with prices
                 [
-                  { hours: 1, price: "1 300 Kč" },
-                  { hours: 2, price: "2 500 Kč" },
-                  { hours: 3, price: "3 700 Kč" },
-                  { hours: 4, price: "4 900 Kč" },
-                  { hours: 5, price: "6 100 Kč" },
-                  { hours: 6, price: "7 300 Kč" },
-                  { hours: 7, price: "8 500 Kč" },
-                  { hours: 8, price: "9 700 Kč" },
+                  { hours: 1, price: "1 000 Kč" },
+                  { hours: 2, price: "1 900 Kč" },
+                  { hours: 3, price: "2 800 Kč" },
+                  { hours: 4, price: "3 700 Kč" },
+                  { hours: 5, price: "4 600 Kč" },
+                  { hours: 6, price: "5 500 Kč" },
+                  { hours: 7, price: "6 400 Kč" },
+                  { hours: 8, price: "7 300 Kč" },
                 ].map((item) => (
                   <button
                     key={item.hours}
