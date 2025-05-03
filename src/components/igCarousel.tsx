@@ -68,19 +68,19 @@ const IgCarousel = () => {
           width={328}
         />
         <InstagramEmbed
-          url="https://www.instagram.com/reel/DHYStjGoFpN/"
+          url="https://www.instagram.com/p/DH5xSipCbKs/"
           width={328}
         />
         <InstagramEmbed
-          url="https://www.instagram.com/p/DHCAkwIoPbo/"
+          url="https://www.instagram.com/p/DHbD7JzIAfE/"
           width={328}
         />
         <InstagramEmbed
-          url="https://www.instagram.com/p/DGkpCNEo3QQ/"
+          url="https://www.instagram.com/p/DEe_gisoXRo/"
           width={328}
         />
         <InstagramEmbed
-          url="https://www.instagram.com/p/DFx_DtMofng/"
+          url="https://www.instagram.com/p/DIgfW3bopJ7/?igsh=aXBocDhzaWowZnNt"
           width={328}
         />
       </Carousel>

@@ -2,11 +2,11 @@ import React from "react";
 import ImageSwitcher from "@/components/imageSwitch";
 import imageUrl1 from "../../public/images/interior/2.jpg";
 import imageUrl2 from "../../public/images/interior/5.jpg";
-import imageUrl3 from "../../public/images/interior/6.jpg";
+import imageUrl3 from "../../public/images/interior/11.jpg";
 import CustomCaption from "@/components/CustomCaption";
 import { Helmet } from "react-helmet";
-import ImageLeft from "/images/vertical/5.jpg"; // Nahraď reálnými cestami
-import ImageRight from "/images/vertical/6.jpg";
+import ImageLeft from "/images/vertical/21.jpg"; // Nahraď reálnými cestami
+import ImageRight from "/images/vertical/20.jpg";
 import MansoryDd from "@/components/Mansory";
 import MansoryDouble from "@/components/MansoryDouble";
 const Room1 = () => {

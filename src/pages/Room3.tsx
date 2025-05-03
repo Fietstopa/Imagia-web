@@ -1,6 +1,6 @@
 import React from "react";
 import ImageSwitcher from "@/components/imageSwitch";
-import imageUrl1 from "../../public/images/room1/COMINGSOON.png";
+import imageUrl1 from "../../public/images/room1/s.png";
 import bottomImage from "../../public/images/room1/3.jpg";
 import imageUrl2 from "../../public/images/interior/7.jpg";
 import imageUrl3 from "../../public/images/interior/9.jpg";
@@ -8,16 +8,16 @@ import CustomCaption from "@/components/CustomCaption";
 import f1 from "../../public/images/room1/3.jpg";
 import f2 from "../../public/images/room1/4.jpg";
 
-const Room2 = () => {
+const Room3 = () => {
   return (
     <div>
       <ImageSwitcher
         image1={imageUrl1}
         image2={imageUrl1}
         image3={imageUrl1}
-        caption="AURORA"
-        undertext="SÁL"
-        description={`Tenhle sál je opravdu perla našeho studia. Jedinečná lehkost a modernost interiéru dodají každému vašemu záběru nádech elegance.`}
+        caption="NOVÝ SÁL"
+        undertext="COMING SOON"
+        description={`PLÁNUJEME PRO VÁS NOVÝ SÁL, KTERÝ SE OTEVŘE V LETĚ`}
         btnText="Rezervace"
       />
 
@@ -88,4 +88,4 @@ const Room2 = () => {
   );
 };
 
-export default Room2;
+export default Room3;
