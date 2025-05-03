@@ -17,7 +17,10 @@ const Navbar = () => {
   const location = useLocation();
   const pathname = location.pathname;
   const isGalleryPage =
-    pathname === "/gallery" || pathname === "/coupons" || pathname === "/rules";
+    pathname === "/gallery" ||
+    pathname === "/coupons" ||
+    pathname === "/rules" ||
+    pathname === "/whyus";
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -65,6 +68,8 @@ const Navbar = () => {
         <NavLink to="/room1" pathname={pathname} label={t("navbar.room1")} />
         <NavLink to="/room2" pathname={pathname} label={t("navbar.room2")} />
         <NavLink to="/room3" pathname={pathname} label={t("navbar.room3")} />
+        <NavLink to="/whyus" pathname={pathname} label={t("navbar.whyus")} />
+
         <NavLink to="/rules" pathname={pathname} label="Pravidla" />
         <NavLink
           to="/coupons"

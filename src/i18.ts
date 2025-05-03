@@ -10,8 +10,9 @@ const resources = {
         room1: "Sál 1",
         room2: "Sál 2",
         room3: "Sál 3",
-        coupons: "Dárkové kupony",
+        coupons: "Kupony",
         reservation: "Rezervace",
+        whyus: "Proč my",
       },
       home: {
         caption: "Fotografie má být odrazem ",
@@ -33,6 +34,7 @@ const resources = {
         room3: "Room 3",
         coupons: "Gift Coupons",
         reservation: "Reservation",
+        whyus: "Why Us",
       },
       home: {
         caption: "Photography is reflection of ",
@@ -54,6 +56,7 @@ const resources = {
         room3: "Зал 3",
         coupons: "Подарочные купоны",
         reservation: "Бронирование",
+        whyus: "Почему мы",
       },
       home: {
         caption: "Фотография - отражение ",
@@ -75,6 +78,7 @@ const resources = {
         room3: "Зал 3",
         coupons: "Подарункові купони",
         reservation: "Бронювати",
+        whyus: "Чому ми",
       },
       home: {
         caption: "Фотографія - відображення ",
