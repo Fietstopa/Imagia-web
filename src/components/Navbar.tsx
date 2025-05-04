@@ -135,6 +135,20 @@ const Navbar = () => {
           {t("navbar.room2")}
         </Link>
         <Link
+          to="/room3"
+          onClick={() => setMenuOpen(false)}
+          className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
+        >
+          {t("navbar.room3")}
+        </Link>
+        <Link
+          to="/whyus"
+          onClick={() => setMenuOpen(false)}
+          className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
+        >
+          {t("navbar.whyus")}
+        </Link>
+        <Link
           to="/coupons"
           onClick={() => setMenuOpen(false)}
           className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
@@ -149,13 +163,7 @@ const Navbar = () => {
         >
           Pravidla
         </Link>
-        <Link
-          to="/rules"
-          onClick={() => setMenuOpen(false)}
-          className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
-        >
-          Pravidla
-        </Link>
+
         <div className="">
           {" "}
           <LanguageSwitcher />
