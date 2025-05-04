@@ -11,14 +11,6 @@ const PromoPageOne = () => {
         style={{ minHeight: "calc(100vh - 54px)" }}
         className="overflow-x-hidden relative py-8 md:py-0"
       >
-        <Helmet>
-          <title>Imagia Ateliér Brno | Profesionální Fotoateliér</title>
-          <meta
-            name="description"
-            content="Profesionální fotoateliér v Brně nabízející portrétní, rodinné a produktové focení v moderním prostředí."
-          />
-        </Helmet>
-
         <CustomCaption
           title="Každý snímek má smysl"
           subtitle="Každý detail má váhu"

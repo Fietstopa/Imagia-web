@@ -42,17 +42,6 @@ const Home = () => {
 
   return (
     <div className="bg-gray-100">
-      <Helmet>
-        <html lang="cs" />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Imagia fotoateliér</title>
-        <meta
-          name="description"
-          content="Objevte ateliér Imagia v Brně – prostor pro profesionální focení portrétů, rodinných a uměleckých snímků. Každý snímek má u nás smysl!"
-        />
-        <link rel="canonical" href="https://www.imagiafotostudio.cz" />
-      </Helmet>
       <ImageSwitcher
         image1={image1}
         image2={image2}

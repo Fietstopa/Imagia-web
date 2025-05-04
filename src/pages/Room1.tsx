@@ -24,14 +24,6 @@ const Room1 = () => {
   ];
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>Arch Deco – Sál | Imagia fotoateliér</title>
-        <meta
-          name="description"
-          content="Sál Arch Deco kombinuje minimalistický interiér, papírové pozadí a profesionální vybavení. Vhodný pro portréty, svatební focení i video tvorbu."
-        />
-      </Helmet>
-
       <ImageSwitcher
         image1={imageUrl1}
         image2={imageUrl2}
