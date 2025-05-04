@@ -41,9 +41,14 @@ const ReservationPage = () => {
             {/* Studio 1 Card */}
             <button
               onClick={() => setSelectedStudio(1)}
-              className="bg-[#1a1a1a]  border border-[#C7AC81]/50  hover:bg-[#2a2a2a] transition-all  overflow-hidden shadow-lg w-full max-w-sm"
+              className="bg-[#1a1a1a] border border-[#C7AC81]/50 hover:bg-[#2a2a2a] transition-all overflow-hidden shadow-lg w-full max-w-sm relative"
             >
-              <div className="h-48 overflow-hidden">
+              {/* Discount Badge */}
+              <div className="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-md z-10">
+                Sezonní sleva
+              </div>
+
+              <div className="h-48 overflow-hidden relative">
                 <img
                   src={sal1}
                   alt="Sál Arch Deco"
@@ -56,8 +61,15 @@ const ReservationPage = () => {
                 </h3>
                 <p className="text-gray-300">
                   Elegantní prostor se stylovým designem, moderním nábytkem a
-                  papírovými pozadí <br /> <br />
+                  papírovými pozadí
+                  <br /> <br />
                 </p>
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="text-gray-400 line-through">1300 Kč/h</span>
+                  <span className="text-[#C7AC81] font-bold text-xl">
+                    1000 Kč/h
+                  </span>
+                </div>
               </div>
             </button>
 
@@ -81,6 +93,11 @@ const ReservationPage = () => {
                   !!! Připravujeme pro vás nový krásný prostor, který se otevře
                   na začátku května, ale už teď si ho můžete rezervovat !!!
                 </p>
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="text-[#C7AC81] font-bold text-xl">
+                    1800 Kč/h
+                  </span>
+                </div>
               </div>
             </button>
           </div>
