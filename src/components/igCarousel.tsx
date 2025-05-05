@@ -9,6 +9,7 @@ import {
   CustomButtonGroup,
   CustomButtonGroupAsArrows,
 } from "./buttonsarrows";
+import { div } from "framer-motion/client";
 
 const IgCarousel = ({ instagramPosts = [] }) => {
   const responsive = {
@@ -47,7 +48,10 @@ const IgCarousel = ({ instagramPosts = [] }) => {
         dotListClass="custom-dot-list-style"
       >
         {instagramPosts.map((postUrl, index) => (
-          <InstagramEmbed key={index} url={postUrl} width={328} />
+          <div className="border-8 border-[#C8AD81]">
+            {" "}
+            <InstagramEmbed key={index} url={postUrl} width={328} />
+          </div>
         ))}
       </Carousel>
     </div>
