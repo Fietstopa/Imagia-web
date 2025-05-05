@@ -54,17 +54,17 @@ const EquipmentGallery = () => {
         <div key={category.name} className="mb-16">
           <h1 className="my-8 text-3xl font-[Montserrat]">{category.name}</h1>
 
-          <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 px-10 md:px-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {category.items.map((item) => (
               <div
                 key={item.id}
-                className="bg-gray-100 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-[#C8AD81]"
+                className="bg-gray-100  overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-[#C8AD81]"
               >
                 <div className="bg-gray-300  flex items-center justify-center">
                   <img
                     src={`/images/equipment/${item.id}.jpeg`}
                     alt={item.name}
-                    className="h-64 w-full object-cover "
+                    className="h-96 md:h-64 w-full object-cover "
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
                         "/images/equipment/default.jpg";
