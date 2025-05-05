@@ -20,8 +20,8 @@ const Navbar = () => {
     pathname === "/gallery" ||
     pathname === "/coupons" ||
     pathname === "/rules" ||
-    pathname === "/whyus";
-
+    pathname === "/whyus" ||
+    pathname === "/equipment";
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (menuOpen) {
@@ -54,11 +54,11 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Link to="/" className="z-[1000]">
-        <img src={logo} alt="Logo" className="h-12 md:h-15" />
+        <img src={logo} alt="Logo" className="h-8 md:h-12" />
       </Link>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex text-lg text-white gap-6 lg:gap-8 xl:gap-10 items-center">
+      <div className="hidden md:flex text-base text-white gap-6 lg:gap-8 xl:gap-10 items-center">
         <NavLink to="/" pathname={pathname} label={t("navbar.home")} />
         <NavLink
           to="/gallery"
@@ -69,6 +69,11 @@ const Navbar = () => {
         <NavLink to="/room2" pathname={pathname} label={t("navbar.room2")} />
         <NavLink to="/room3" pathname={pathname} label={t("navbar.room3")} />
         <NavLink to="/whyus" pathname={pathname} label={t("navbar.whyus")} />
+        <NavLink
+          to="/equipment"
+          pathname={pathname}
+          label={t("navbar.equipment")}
+        />
 
         <NavLink to="/rules" pathname={pathname} label={t("navbar.rules")} />
         <NavLink
@@ -147,6 +152,13 @@ const Navbar = () => {
           className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
         >
           {t("navbar.whyus")}
+        </Link>
+        <Link
+          to="/equipment"
+          onClick={() => setMenuOpen(false)}
+          className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
+        >
+          {t("navbar.equipment")}
         </Link>
         <Link
           to="/coupons"

@@ -1,3 +1,4 @@
+import CustomCaption from "@/components/CustomCaption";
 import React from "react";
 
 const EquipmentGallery = () => {
@@ -107,7 +108,11 @@ const EquipmentGallery = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-center mb-8">Naše vybavení</h2>
+      <CustomCaption
+        title="Nase"
+        subtitle="Vybaveni"
+        classProps=""
+      ></CustomCaption>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {equipmentItems.map((item) => (
           <div
@@ -126,12 +131,9 @@ const EquipmentGallery = () => {
               />
             </div>
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-center mb-2">
+              <h3 className="text-base font-semibold text-center mb-2">
                 {item.name}
               </h3>
-              <p className="text-gray-600 text-sm text-center">
-                {item.description}
-              </p>
             </div>
           </div>
         ))}

@@ -1,13 +1,4 @@
-import React from "react";
-import ImageSwitcher from "@/components/imageSwitch";
-import imageUrl1 from "../../public/images/room1/s.png";
-import bottomImage from "../../public/images/room1/3.jpg";
-import imageUrl2 from "../../public/images/interior/7.jpg";
-import imageUrl3 from "../../public/images/interior/9.jpg";
 import CustomCaption from "@/components/CustomCaption";
-import f1 from "../../public/images/room1/3.jpg";
-import f2 from "../../public/images/room1/4.jpg";
-import EquipmentGallery from "./Equipment";
 
 const WhyUs = () => {
   const reasons = [
@@ -121,7 +112,6 @@ const WhyUs = () => {
           ))}
         </div>
       </div>
-      <EquipmentGallery></EquipmentGallery>
     </div>
   );
 };

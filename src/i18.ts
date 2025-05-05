@@ -14,6 +14,7 @@ const resources = {
         reservation: "Rezervace",
         whyus: "Proč právě my",
         rules: "Pravidla",
+        equipment: "Vybavení",
       },
       home: {
         caption: "Fotografie má být odrazem ",
@@ -44,6 +45,7 @@ const resources = {
         reservation: "Reservation",
         whyus: "Why Us",
         rules: "Rules",
+        equipment: "Equipment",
       },
       home: {
         caption: "Photography is reflection of ",
@@ -70,10 +72,11 @@ const resources = {
         room1: "Зал 1",
         room2: "Зал 2",
         room3: "Зал 3",
-        coupons: "Подарочные купоны",
+        coupons: "Сертификаты",
         reservation: "Бронирование",
         whyus: "Почему мы",
         rules: "Правила",
+        equipment: "Оборудование",
       },
       home: {
         caption: "Фотография - отражение ",
@@ -104,6 +107,7 @@ const resources = {
         reservation: "Бронювати",
         whyus: "Чому ми",
         rules: "Правила",
+        equipment: "Обладнання",
       },
       home: {
         caption: "Фотографія - відображення ",

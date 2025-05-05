@@ -14,6 +14,7 @@ import { h1 } from "framer-motion/client";
 import Rules from "./pages/Rules";
 import Room3 from "./pages/Room3";
 import WhyUs from "./pages/WhyUs";
+import EquipmentGallery from "./pages/Equipment";
 
 // ScrollToTop komponenta
 function ScrollToTop() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/room2" element={<Room2 />} />
         <Route path="/room3" element={<Room3 />} />
         <Route path="/whyus" element={<WhyUs />} />
+        <Route path="/equipment" element={<EquipmentGallery />} />
 
         <Route path="/coupons" element={<Coupons />} />
         <Route path="/rules" element={<Rules />} />
