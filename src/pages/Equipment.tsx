@@ -61,7 +61,7 @@ const EquipmentGallery = () => {
     },
     {
       id: 15,
-      name: "GodOX DP800III-V, 800ws 2ks",
+      name: "GODOX DP800III-V, 800ws 2ks",
     },
     {
       id: 16,
