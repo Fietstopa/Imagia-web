@@ -94,16 +94,6 @@ const EquipmentGallery = () => {
       name: "Green screen",
       description: "Profesionální pozadí pro počítačové efekty",
     },
-    {
-      id: 19,
-      name: "Ring light",
-      description: "Kruhové světlo pro dokonalé portrétní osvětlení",
-    },
-    {
-      id: 20,
-      name: "Fotografický reflektor",
-      description: "5v1 systém pro různé světelné efekty",
-    },
   ];
 
   return (
