@@ -53,7 +53,7 @@ const EquipmentGallery = () => {
     },
     {
       id: 13,
-      name: "nanlite FS-300b LED Bi-color 2ks",
+      name: "Nan FS-300b LED Bi-color 2ks",
     },
     {
       id: 14,
@@ -94,7 +94,7 @@ const EquipmentGallery = () => {
               />
             </div>
             <div className="p-4">
-              <h3 className="text-base  font-semibold text-center mb-2">
+              <h3 className="text-base  font-semibold text-center mb-2 text-capitalize">
                 {item.name}
               </h3>
             </div>
