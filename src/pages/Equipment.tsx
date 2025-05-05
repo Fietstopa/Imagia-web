@@ -22,7 +22,7 @@ const EquipmentGallery = () => {
         { id: 5, name: "SOFTBOX-OCTABOX GODOX 95CM 2x" },
         {
           id: 12,
-          name: "PROJEKČNÍ ADAPTÉR/REFLEKTOR GODOX BLP (GOBO) + SADA GOBO FILTRŮ",
+          name: "PROJEKČNÍ ADAPTÉR GODOX BLP (GOBO) + SADA GOBO FILTRŮ",
         },
       ],
     },
