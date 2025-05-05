@@ -32,6 +32,48 @@ const resources = {
         foto1: "Fotoateliér v Brně – snímek z ateliéru Imagia",
         foto2: "Druhý snímek z ateliéru Imagia v Brně",
       },
+      rules: {
+        title1: "Délka pronájmu",
+        content1: `- Ve studiu platí koncept "studijní hodiny"
+        - Při rezervaci 60 minut máte k dispozici 55 minut
+        - Zbylých 5 minut je vyhrazeno pro úklid a přípravu
+        - Klient musí seznámit všechny účastníky s pravidly`,
+        title2: "Rezervace a storno",
+        content2: `- Rezervace po uhrazení 100% zálohy
+        - Storno bez ztráty zálohy 48 hodin předem
+        - Storno 24 hodin předem: 50% poplatek
+        - Storno méně než 24 hodin předem: propadá celá záloha
+        - Přesun rezervace možný 48 hodin předem
+        - Opakovaný přesun: 50% poplatek z ceny pronájmu`,
+        title3: "Provozní pravidla",
+        content3: `- Maximálně 6 osob ve studiu (více osob po domluvě +300 Kč/osoba)
+                  - Povinná čistá výměnná obuv
+                  - Zákaz otevřeného ohně (pokuta 3000 Kč)
+                  - Zákaz dýmovnic a bengálských ohňů
+                  - Dekorativní svíčky pouze s dozorem administrátora
+                  - Zákaz pornografického obsahu (pokuta 50 000 Kč)
+                    - Zákaz alkoholu a podnapilého stavu
+                    - Zákaz pořádání oslav a akcí`,
+        title4: "Úklid a odpovědnost",
+        content4: `- Studio předávat v původním stavu
+        - Klient odpovídá za čistotu a stav vybavení
+        - Poškození majetku hradí klient
+        - Poplatek za znečištění papírových pozadí: 300 Kč/metr`,
+        title5: "Speciální případy",
+        content5: `- Focení s jídlem/zvířaty po domluvě
+        - Pro zvířata: vlastní deky a podložky
+        - Použití sypkých materiálů (mouka, konfety) nutno nahlásit
+        - Změna barev pozadí po domluvě s administrátorem
+        - Příplatek za speciální úklid: 300 Kč nebo 20 minut z času focení`,
+        title6: "Technické požadavky",
+        content6: `- Poškození vybavení bude vyčísleno administrátorem
+                  - Potřeby studiového vybavení řešit s administrátorem
+                  - Zákaz technických zásahů do vybavení studia`,
+        title7: "Bezpečnostní pravidla",
+        content7: `- Zákaz nebezpečných materiálů bez dozoru
+                    - Povinnost hlásit úrazy a nehody
+                    - Zákaz manipulace s elektroinstalací`,
+      },
     },
   },
   en: {
@@ -63,6 +105,29 @@ const resources = {
       altTags: {
         foto1: "Photo studio in Brno – photo from Imagia studio",
         foto2: "Second photo from Imagia studio in Brno",
+      },
+      rules: {
+        title1: "Rental Duration",
+        content1:
+          "- Studio operates on 'studio hours' concept\n- 60-minute booking gives you 55 minutes of actual use\n- Remaining 5 minutes are reserved for cleanup and preparation\n- Client must inform all participants about the rules",
+        title2: "Reservation and Cancellation",
+        content2:
+          "- Reservation confirmed after 100% deposit payment\n- Free cancellation up to 48 hours in advance\n- 50% fee for cancellation within 24 hours\n- Cancellation less than 24 hours: full deposit forfeited\n- Rescheduling possible up to 48 hours in advance\n- Repeated rescheduling: 50% fee of rental price",
+        title3: "Operating Rules",
+        content3:
+          "- Maximum 6 people in studio (more by arrangement +300 CZK/person)\n- Clean indoor shoes required\n- Open flames prohibited (3000 CZK fine)\n- Smoke bombs and sparklers prohibited\n- Decorative candles only with supervisor present\n- Pornographic content prohibited (50,000 CZK fine)\n- Alcohol and intoxication prohibited\n- Parties and events prohibited",
+        title4: "Cleaning and Responsibility",
+        content4:
+          "- Leave studio in original condition\n- Client responsible for cleanliness and equipment condition\n- Client liable for any damages\n- Background paper contamination fee: 300 CZK/meter",
+        title5: "Special Cases",
+        content5:
+          "- Food/animal photography by arrangement\n- For animals: bring your own blankets and pads\n- Must report use of loose materials (flour, confetti)\n- Background color changes by arrangement with supervisor\n- Special cleaning surcharge: 300 CZK or 20 minutes from shooting time",
+        title6: "Technical Requirements",
+        content6:
+          "- Equipment damage will be assessed by supervisor\n- Studio equipment needs to be discussed with supervisor\n- No technical modifications to studio equipment allowed",
+        title7: "Safety Rules",
+        content7:
+          "- Hazardous materials prohibited without supervision\n- Must report all accidents and injuries\n- No tampering with electrical installations",
       },
     },
   },
@@ -97,6 +162,29 @@ const resources = {
         foto1: "Фотостудия в Брно – фото из студии Imagia",
         foto2: "Второе фото из студии Imagia в Брно",
       },
+      rules: {
+        title1: "Продолжительность аренды",
+        content1:
+          "- В студии действует концепция 'студийных часов'\n- При бронировании 60 минут вам доступно 55 минут\n- Оставшиеся 5 минут отведены на уборку и подготовку\n- Клиент должен ознакомить всех участников с правилами",
+        title2: "Бронирование и отмена",
+        content2:
+          "- Бронирование после оплаты 100% депозита\n- Бесплатная отмена за 48 часов\n- Отмена за 24 часа: штраф 50%\n- Отмена менее чем за 24 часа: депозит не возвращается\n- Перенос возможен за 48 часов\n- Повторный перенос: штраф 50% от стоимости аренды",
+        title3: "Правила эксплуатации",
+        content3:
+          "- Максимум 6 человек (больше по договорённости +300 крон/чел)\n- Обязательна чистая сменная обувь\n- Запрещён открытый огонь (штраф 3000 крон)\n- Запрещены дымовые шашки и бенгальские огни\n- Декоративные свечи только под присмотром\n- Запрещена порнография (штраф 50 000 крон)\n- Запрещён алкоголь и состояние опьянения\n- Запрещены вечеринки и мероприятия",
+        title4: "Уборка и ответственность",
+        content4:
+          "- Передавать студию в исходном состоянии\n- Клиент отвечает за чистоту и состояние оборудования\n- Ущерб оплачивает клиент\n- Загрязнение фонов: 300 крон/метр",
+        title5: "Особые случаи",
+        content5:
+          "- Съёмка с едой/животными по договорённости\n- Для животных: свои подстилки\n- Использование сыпучих материалов (мука, конфетти) нужно согласовать\n- Смена цвета фона по договорённости\n- Доплата за особую уборку: 300 крон или 20 минут съёмки",
+        title6: "Технические требования",
+        content6:
+          "- Ущерб оборудованию оценивает администратор\n- Вопросы по оборудованию решать с администратором\n- Запрещены технические вмешательства в оборудование",
+        title7: "Техника безопасности",
+        content7:
+          "- Опасные материалы запрещены без присмотра\n- Обязательно сообщать о травмах и авариях\n- Запрещено вмешиваться в электропроводку",
+      },
     },
   },
   ua: {
@@ -128,6 +216,29 @@ const resources = {
       altTags: {
         foto1: "Фотостудія у Брно – фото зі студії Imagia",
         foto2: "Друге фото зі студії Imagia у Брно",
+      },
+      rules: {
+        title1: "Тривалість оренди",
+        content1:
+          "- У студії діє концепція 'студійних годин'\n- При бронюванні 60 хвилин вам доступно 55 хвилин\n- Решта 5 хвилин відведені на прибирання та підготовку\n- Клієнт повинен ознайомити всіх учасників з правилами",
+        title2: "Бронювання та скасування",
+        content2:
+          "- Бронювання після оплати 100% депозиту\n- Безкоштовне скасування за 48 годин\n- Скасування за 24 години: штраф 50%\n- Скасування менш ніж за 24 години: депозит не повертається\n- Перенесення можливе за 48 годин\n- Повторне перенесення: штраф 50% від вартості оренди",
+        title3: "Правила експлуатації",
+        content3:
+          "- Максимум 6 осіб (більше за домовленістю +300 крон/особа)\n- Обов'язкове чисте змінне взуття\n- Заборонено відкритий вогонь (штраф 3000 крон)\n- Заборонено димові шашки та бенгальські вогні\n- Декоративні свічки лише під наглядом\n- Заборонена порнографія (штраф 50 000 крон)\n- Заборонений алкоголь та стан сп'яніння\n- Заборонені вечірки та заходи",
+        title4: "Прибирання та відповідальність",
+        content4:
+          "- Передавати студію у початковому стані\n- Клієнт відповідає за чистоту та стан обладнання\n- Шкоду оплачує клієнт\n- Забруднення фонів: 300 крон/метр",
+        title5: "Особливі випадки",
+        content5:
+          "- Зйомка з їжею/тваринами за домовленістю\n- Для тварин: свої підстилки\n- Використання сипучих матеріалів (борошно, конфеті) потрібно узгодити\n- Зміна кольору фону за домовленістю\n- Доплата за особливе прибирання: 300 крон або 20 хвилин зйомки",
+        title6: "Технічні вимоги",
+        content6:
+          "- Шкоду обладнанню оцінює адміністратор\n- Питання щодо обладнання вирішувати з адміністратором\n- Заборонено технічні втручання в обладнання",
+        title7: "Техніка безпеки",
+        content7:
+          "- Небезпечні матеріали заборонені без нагляду\n- Обов'язково повідомляти про травми та аварії\n- Заборонено втручатися в електропроводку",
       },
     },
   },
