@@ -5,75 +5,67 @@ const EquipmentGallery = () => {
   const equipmentItems = [
     {
       id: 1,
-      name: "Profesionální fotoaparát",
+      name: "PAVOTUBE NANLITE T8-7X. 110 CM 2ks",
     },
     {
       id: 2,
-      name: "Objektiv 24-70mm",
+      name: "SOFTBOX-OCTABOX GODOX S VOŠTINOU 95CM 2ks",
     },
     {
       id: 3,
-      name: "Objektiv 70-200mm",
+      name: "SOFTBOX NANLITE 60X90 2ks",
     },
     {
       id: 4,
-      name: "Makro objektiv",
+      name: "BALÓNOVÝ SOFTBOX GODOX 65 CM",
     },
     {
       id: 5,
-      name: "Studiové světlo",
+      name: "SOFTBOX-OCTABOX GODOX  95CM 2ks",
     },
     {
       id: 6,
-      name: "Odrazná deska",
+      name: "HEAVY TRIPOD 4,5M",
     },
     {
       id: 7,
-      name: "Stativ Manfrotto",
+      name: "JEŘÁBOVÝ STATIV BOOM 2,8M",
     },
     {
       id: 8,
-      name: "Dron DJI Mavic",
+      name: "STATIV STUDIOVÝ 2,8M 2ks",
     },
     {
       id: 9,
-      name: "Gimbal stabilizátor",
+      name: "Větrák 150W",
     },
     {
       id: 10,
-      name: "Fotografický set",
+      name: "RADIOVÁ ŘIDÍCÍ JEDNOTKA GODOX XT-16 (VYSÍLAČ)",
     },
     {
       id: 11,
-      name: "Bateriový grip",
+      name: "SMOKE GENERATOR LED-500",
     },
     {
       id: 12,
-      name: "Externí blesk",
+      name: "PROJEKČNÍ ADAPTÉR GODOX BLP, SADA GOBO FILTRŮ ",
     },
     {
       id: 13,
-      name: "Softbox",
+      name: "nanlite FS-300b LED Bi-color 2ks",
     },
     {
       id: 14,
-      name: "Filtrový set",
+      name: "GODOX SL-150III",
     },
     {
       id: 15,
-      name: "Fotografický batoh",
+      name: "GodOX DP800III-V, 800ws 2ks",
     },
     {
       id: 16,
       name: "Monitor kalibrátor",
-    },
-    {
-      id: 17,
-      name: "Bezdrátový trigger",
-    },
-    {
-      id: 18,
-      name: "Green screen",
     },
   ];
 
@@ -84,17 +76,17 @@ const EquipmentGallery = () => {
         subtitle="Vybevení"
         classProps=""
       ></CustomCaption>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
         {equipmentItems.map((item) => (
           <div
             key={item.id}
-            className="bg-gray-100 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-[#C8AD81]"
+            className="bg-gray-100  overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-[#C8AD81]"
           >
-            <div className="h-64 bg-gray-300 flex items-center justify-center">
+            <div className="bg-gray-300 flex items-center justify-center">
               <img
                 src={`/images/equipment/${item.id}.jpeg`}
                 alt={item.name}
-                className="h-full w-full object-cover"
+                className="h-96 w-full object-cover"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src =
                     "/images/equipment/default.jpg";
@@ -102,7 +94,7 @@ const EquipmentGallery = () => {
               />
             </div>
             <div className="p-4">
-              <h3 className="text-base font-semibold text-center mb-2">
+              <h3 className="text-base  font-semibold text-center mb-2">
                 {item.name}
               </h3>
             </div>
