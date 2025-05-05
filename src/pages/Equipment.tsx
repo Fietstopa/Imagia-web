@@ -6,10 +6,10 @@ const EquipmentGallery = () => {
     {
       name: "Záblesková a trvalá světla",
       items: [
-        { id: 15, name: "GODOX DP800III-V, 800ws 2x" },
+        { id: 15, name: "GODOX DP800III-V, 800WS 2x" },
         { id: 14, name: "GODOX SL-150III" },
-        { id: 13, name: "Nan FS-300b LED Bi-color 2x" },
-        { id: 1, name: "PAVOTUBE NANLITE T8-7X. 110 CM 2x" },
+        { id: 13, name: "NANLITE FS-300B LED BI-COLOR" },
+        { id: 1, name: "NANLITE T8-7X. 110 CM 2x" },
       ],
     },
 
@@ -34,10 +34,10 @@ const EquipmentGallery = () => {
     {
       name: "Ostatní vybavení",
       items: [
-        { id: 9, name: "Větrák 150W" },
+        { id: 9, name: "VĚTRÁK 150W" },
         { id: 10, name: "RADIOVÁ ŘIDÍCÍ JEDNOTKA GODOX XT-16 (VYSÍLAČ)" },
         { id: 11, name: "SMOKE GENERATOR LED-500" },
-        { id: 16, name: "Monitor kalibrátor" },
+        { id: 16, name: "VYBAVENÍ" },
       ],
     },
   ];
@@ -68,7 +68,7 @@ const EquipmentGallery = () => {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-base font-semibold text-center mb-2">
+                  <h3 className="text-base capitalize font-semibold text-center mb-2">
                     {item.name}
                   </h3>
                 </div>
