@@ -4,26 +4,22 @@ import React from "react";
 const EquipmentGallery = () => {
   const equipmentCategories = [
     {
-      name: "Záblesková světla",
+      name: "Světla",
       items: [
-        { id: 15, name: "GODOX DP800III-V, 800ws 2ks" },
+        { id: 15, name: "GODOX DP800III-V, 800ws 2x" },
         { id: 14, name: "GODOX SL-150III" },
+        { id: 13, name: "Nan FS-300b LED Bi-color 2x" },
+        { id: 1, name: "PAVOTUBE NANLITE T8-7X. 110 CM 2x" },
       ],
     },
-    {
-      name: "Stálá světla",
-      items: [
-        { id: 13, name: "Nan FS-300b LED Bi-color 2ks" },
-        { id: 1, name: "PAVOTUBE NANLITE T8-7X. 110 CM 2ks" },
-      ],
-    },
+
     {
       name: "Světelné modifikátory",
       items: [
-        { id: 2, name: "SOFTBOX-OCTABOX GODOX S VOŠTINOU 95CM 2ks" },
-        { id: 3, name: "SOFTBOX NANLITE 60X90 2ks" },
+        { id: 2, name: "SOFTBOX-OCTABOX GODOX S VOŠTINOU 95CM 2x" },
+        { id: 3, name: "SOFTBOX NANLITE 60X90 2x" },
         { id: 4, name: "BALÓNOVÝ SOFTBOX GODOX 65 CM" },
-        { id: 5, name: "SOFTBOX-OCTABOX GODOX 95CM 2ks" },
+        { id: 5, name: "SOFTBOX-OCTABOX GODOX 95CM 2x" },
         { id: 12, name: "PROJEKČNÍ ADAPTÉR GODOX BLP, SADA GOBO FILTRŮ" },
       ],
     },
@@ -32,7 +28,7 @@ const EquipmentGallery = () => {
       items: [
         { id: 6, name: "HEAVY TRIPOD 4,5M" },
         { id: 7, name: "JEŘÁBOVÝ STATIV BOOM 2,8M" },
-        { id: 8, name: "STATIV STUDIOVÝ 2,8M 2ks" },
+        { id: 8, name: "STATIV STUDIOVÝ 2,8M 2x" },
       ],
     },
     {
