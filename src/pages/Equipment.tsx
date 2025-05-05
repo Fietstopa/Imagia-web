@@ -116,12 +116,12 @@ const EquipmentGallery = () => {
           >
             <div className="h-64 bg-gray-300 flex items-center justify-center">
               <img
-                src={`../../public/images/equipment/${item.id}.jpeg`}
+                src={`/images/equipment/${item.id}.jpeg`}
                 alt={item.name}
                 className="h-full w-full object-cover"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src =
-                    "../../public/images/equipment/default.jpg";
+                    "/images/equipment/default.jpg";
                 }}
               />
             </div>
