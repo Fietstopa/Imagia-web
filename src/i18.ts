@@ -7,6 +7,7 @@ const resources = {
       navbar: {
         home: "Domů",
         gallery: "Galerie",
+        rooms: "Sály",
         room1: "Sál 1",
         room2: "Sál 2",
         room3: "Sál 3",
@@ -38,6 +39,7 @@ const resources = {
       navbar: {
         home: "Home",
         gallery: "Gallery",
+        rooms: "Rooms",
         room1: "Room 1",
         room2: "Room 2",
         room3: "Room 3",
@@ -69,6 +71,8 @@ const resources = {
       navbar: {
         home: "Главная",
         gallery: "Галерея",
+
+        rooms: "Залы",
         room1: "Зал 1",
         room2: "Зал 2",
         room3: "Зал 3",
@@ -100,6 +104,7 @@ const resources = {
       navbar: {
         home: "Головна",
         gallery: "Галерея",
+        rooms: "Зали",
         room1: "Зал 1",
         room2: "Зал 2",
         room3: "Зал 3",

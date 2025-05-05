@@ -13,6 +13,7 @@ const Navbar = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [roomsDropdownOpen, setRoomsDropdownOpen] = useState(false);
 
   const location = useLocation();
   const pathname = location.pathname;
@@ -22,6 +23,7 @@ const Navbar = () => {
     pathname === "/rules" ||
     pathname === "/whyus" ||
     pathname === "/equipment";
+
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (menuOpen) {
@@ -65,17 +67,73 @@ const Navbar = () => {
           pathname={pathname}
           label={t("navbar.gallery")}
         />
-        <NavLink to="/room1" pathname={pathname} label={t("navbar.room1")} />
-        <NavLink to="/room2" pathname={pathname} label={t("navbar.room2")} />
-        <NavLink to="/room3" pathname={pathname} label={t("navbar.room3")} />
+
+        {/* Rooms Dropdown */}
+        <div
+          className="relative"
+          onMouseEnter={() => setRoomsDropdownOpen(true)}
+          onMouseLeave={() => setRoomsDropdownOpen(false)}
+        >
+          <button
+            className={`${
+              pathname === "/room1" ||
+              pathname === "/room2" ||
+              pathname === "/room3"
+                ? "border-b-2 border-[#C7AC81]"
+                : "hover:border-b-2 hover:border-[#C7AC81]"
+            }  transition-all  flex items-center`}
+          >
+            {t("navbar.rooms")}
+            <svg
+              className={`ml-1 w-4 h-4 transition-transform ${
+                roomsDropdownOpen ? "rotate-180" : ""
+              }`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          {roomsDropdownOpen && (
+            <div className="absolute left-0  w-48 bg-gray-950 shadow-lg z-50">
+              <Link
+                to="/room1"
+                className="block px-4 py-2 text-white hover:bg-[#C7AC81] hover:text-black transition-colors"
+                onClick={() => setRoomsDropdownOpen(false)}
+              >
+                {t("navbar.room1")}
+              </Link>
+              <Link
+                to="/room2"
+                className="block px-4 py-2 text-white hover:bg-[#C7AC81] hover:text-black transition-colors"
+                onClick={() => setRoomsDropdownOpen(false)}
+              >
+                {t("navbar.room2")}
+              </Link>
+              <Link
+                to="/room3"
+                className="block px-4 py-2 text-white hover:bg-[#C7AC81] hover:text-black transition-colors"
+                onClick={() => setRoomsDropdownOpen(false)}
+              >
+                {t("navbar.room3")}
+              </Link>
+            </div>
+          )}
+        </div>
+
         <NavLink
           to="/equipment"
           pathname={pathname}
           label={t("navbar.equipment")}
         />
-
         <NavLink to="/whyus" pathname={pathname} label={t("navbar.whyus")} />
-
         <NavLink to="/rules" pathname={pathname} label={t("navbar.rules")} />
         <NavLink
           to="/coupons"
@@ -126,27 +184,67 @@ const Navbar = () => {
         >
           {t("navbar.gallery")}
         </Link>
-        <Link
-          to="/room1"
-          onClick={() => setMenuOpen(false)}
-          className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
-        >
-          {t("navbar.room1")}
-        </Link>
-        <Link
-          to="/room2"
-          onClick={() => setMenuOpen(false)}
-          className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
-        >
-          {t("navbar.room2")}
-        </Link>
-        <Link
-          to="/room3"
-          onClick={() => setMenuOpen(false)}
-          className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
-        >
-          {t("navbar.room3")}
-        </Link>
+
+        {/* Mobile Rooms Dropdown */}
+        <div className="flex flex-col items-center">
+          <button
+            onClick={() => setRoomsDropdownOpen(!roomsDropdownOpen)}
+            className="text-2xl text-white hover:text-[#C7AC81] transition-colors flex items-center"
+          >
+            {t("navbar.rooms")}
+            <svg
+              className={`ml-1 w-4 h-4 transition-transform ${
+                roomsDropdownOpen ? "rotate-180" : ""
+              }`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          {roomsDropdownOpen && (
+            <div className="flex flex-col items-center mt-2">
+              <Link
+                to="/room1"
+                onClick={() => {
+                  setMenuOpen(false);
+                  setRoomsDropdownOpen(false);
+                }}
+                className="text-xl text-white hover:text-[#C7AC81] transition-colors"
+              >
+                {t("navbar.room1")}
+              </Link>
+              <Link
+                to="/room2"
+                onClick={() => {
+                  setMenuOpen(false);
+                  setRoomsDropdownOpen(false);
+                }}
+                className="text-xl text-white hover:text-[#C7AC81] transition-colors"
+              >
+                {t("navbar.room2")}
+              </Link>
+              <Link
+                to="/room3"
+                onClick={() => {
+                  setMenuOpen(false);
+                  setRoomsDropdownOpen(false);
+                }}
+                className="text-xl text-white hover:text-[#C7AC81] transition-colors"
+              >
+                {t("navbar.room3")}
+              </Link>
+            </div>
+          )}
+        </div>
+
         <Link
           to="/whyus"
           onClick={() => setMenuOpen(false)}
@@ -168,7 +266,6 @@ const Navbar = () => {
         >
           {t("navbar.coupons")}
         </Link>
-
         <Link
           to="/rules"
           onClick={() => setMenuOpen(false)}
@@ -181,17 +278,17 @@ const Navbar = () => {
           {" "}
           <LanguageSwitcher />
         </div>
-
-        {/* Mobile Reservation Button */}
       </div>
     </nav>
   );
 };
+
 interface NavLinkProps {
   to: string;
   pathname: string;
   label: string;
 }
+
 // Reusable NavLink component
 const NavLink: React.FC<NavLinkProps> = ({ to, pathname, label }) => (
   <Link
