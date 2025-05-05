@@ -68,12 +68,13 @@ const Navbar = () => {
         <NavLink to="/room1" pathname={pathname} label={t("navbar.room1")} />
         <NavLink to="/room2" pathname={pathname} label={t("navbar.room2")} />
         <NavLink to="/room3" pathname={pathname} label={t("navbar.room3")} />
-        <NavLink to="/whyus" pathname={pathname} label={t("navbar.whyus")} />
         <NavLink
           to="/equipment"
           pathname={pathname}
           label={t("navbar.equipment")}
         />
+
+        <NavLink to="/whyus" pathname={pathname} label={t("navbar.whyus")} />
 
         <NavLink to="/rules" pathname={pathname} label={t("navbar.rules")} />
         <NavLink
