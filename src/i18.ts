@@ -27,7 +27,7 @@ const resources = {
       title: "Každý snímek má smysl",
       subtitle: "Každý detail má váhu",
       descriptionText:
-        "<firstline>Vítejte v ateliéru Imagia</firstline> – útulném a kreativním prostoru pro focení v srdci Brna. Najdete nás na ulici Milady Horákové, jen pár minut jízdy z centra města.<br/><br/>Náš ateliér propojuje moderní fotografii s osobním a přívětivým přístupem – ideální pro portréty, rodinná focení nebo profesionální snímky. Přijet k nám je snadné: stačí naskočit na <tram>Tramvaj číslo 9</tram> a jste doslova pár kroků od našich dveří.<br/><br/>Ať už chcete zachytit výjimečné vzpomínky, nebo vytvořit něco uměleckého, Imagia je to pravé místo, kde vaše vize ožívají. Už se nemůžeme dočkat, až vás přivítáme!",
+        "<firstline>Vítejte v ateliéru Imagia</firstline> – útulném a kreativním prostoru pro focení v srdci Brna. Najdete nás na ulici Milady Horákové, jen pár minut jízdy z centra města.<br/><br/>Moderní fotostudio s profesionálním zázemím pro tvorbu vizuálního obsahu na vysoké úrovni. Flexibilní prostor je ideální pro rodinné focení, portréty i komerční projekty. Nabízíme kvalitní techniku, komfortní prostředí a spolehlivý servis.Přijet k nám je snadné: stačí naskočit na <tram>Tramvaj číslo 9</tram> a jste doslova pár kroků od našich dveří.<br/><br/>Ať už toužíte zachytit nezapomenutelné okamžiky, nebo vytvořit něco opravdu originálního, Imagia je tím pravým místem pro vaši kreativitu. Těšíme se, až vás u nás přivítáme a pomůžeme vašim nápadům ožít! ",
       altTags: {
         foto1: "Fotoateliér v Brně – snímek z ateliéru Imagia",
         foto2: "Druhý snímek z ateliéru Imagia v Brně",
