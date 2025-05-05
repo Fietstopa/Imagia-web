@@ -10,8 +10,8 @@ import imageUrl1 from "../../public/images/interior/2.jpg";
 import imageUrl2 from "../../public/images/interior/5.jpg";
 import imageUrl3 from "../../public/images/interior/11.jpg";
 
-import imageUrlVertical1 from "../../public/images/vertical/1.jpg";
-import imageUrlVertical2 from "../../public/images/vertical/3.jpg";
+import imageUrlVertical1 from "../../public/images/vertical/3.jpg";
+import imageUrlVertical2 from "../../public/images/vertical/22.jpg";
 import imageUrlVertical3 from "../../public/images/vertical/2.jpg";
 
 const Home = () => {

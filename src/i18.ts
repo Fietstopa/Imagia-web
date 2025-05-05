@@ -12,7 +12,7 @@ const resources = {
         room3: "Sál 3",
         coupons: "Kupony",
         reservation: "Rezervace",
-        whyus: "Proč my",
+        whyus: "Proč právě my",
       },
       home: {
         caption: "Fotografie má být odrazem ",
