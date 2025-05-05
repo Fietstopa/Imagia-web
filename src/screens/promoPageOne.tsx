@@ -22,7 +22,7 @@ const PromoPageOne = () => {
 
         <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-10 px-4 md:px-8 lg:px-12 h-full">
           {/* První obrázek - mobil nad textem, desktop vlevo */}
-          <div className="md:order-1 w-full h-[300px] md:h-auto relative">
+          <div className="md:order-1 w-full md:h-auto relative">
             <img
               src={f1}
               alt={t("altTags.foto1")}
@@ -32,7 +32,7 @@ const PromoPageOne = () => {
 
           {/* Textový obsah - mobil uprostřed, desktop uprostřed */}
           <div className="md:order-2 flex">
-            <div className="text-[#777777] font-[Montserrat] space-y-4 md:space-y-6 text-sm md:text-base leading-relaxed md:leading-loose">
+            <div className="text-[#777777] font-[Montserrat] space-y-4 md:space-y-6 text-base md:text-base  leading-relaxed md:leading-loose">
               <Trans
                 i18nKey="descriptionText"
                 components={{
@@ -47,7 +47,7 @@ const PromoPageOne = () => {
           </div>
 
           {/* Druhý obrázek - mobil pod textem, desktop vpravo */}
-          <div className="md:order-3 w-full h-[300px] md:h-auto relative">
+          <div className="md:order-3 w-full md:h-auto relative">
             <img
               src={f2}
               alt={t("altTags.foto2")}

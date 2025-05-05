@@ -10,7 +10,7 @@ import {
   CustomButtonGroupAsArrows,
 } from "./buttonsarrows";
 
-const IgCarousel = () => {
+const IgCarousel = ({ instagramPosts = [] }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -39,53 +39,33 @@ const IgCarousel = () => {
       <Carousel
         responsive={responsive}
         infinite
-        // Because we're using custom buttons, we hide default arrows
         arrows={false}
-        // Allow buttons to render outside the carousel container
         renderButtonGroupOutside
-        // Use your custom arrow/button group
         customButtonGroup={<CustomButtonGroupAsArrows />}
-        // Center the carousel within its container
         containerClass="mx-auto"
-        // Center each item
         itemClass="flex justify-center px-2"
         dotListClass="custom-dot-list-style"
       >
-        <InstagramEmbed
-          url="https://www.instagram.com/reel/DHYStjGoFpN/"
-          width={328}
-        />
-        <InstagramEmbed
-          url="https://www.instagram.com/p/DHCAkwIoPbo/"
-          width={328}
-        />
-        <InstagramEmbed
-          url="https://www.instagram.com/p/DGkpCNEo3QQ/"
-          width={328}
-        />
-        <InstagramEmbed
-          url="https://www.instagram.com/p/DFx_DtMofng/"
-          width={328}
-        />
-        <InstagramEmbed
-          url="https://www.instagram.com/p/DH5xSipCbKs/"
-          width={328}
-        />
-        <InstagramEmbed
-          url="https://www.instagram.com/p/DHbD7JzIAfE/"
-          width={328}
-        />
-        <InstagramEmbed
-          url="https://www.instagram.com/p/DEe_gisoXRo/"
-          width={328}
-        />
-        <InstagramEmbed
-          url="https://www.instagram.com/p/DIgfW3bopJ7/?igsh=aXBocDhzaWowZnNt"
-          width={328}
-        />
+        {instagramPosts.map((postUrl, index) => (
+          <InstagramEmbed key={index} url={postUrl} width={328} />
+        ))}
       </Carousel>
     </div>
   );
+};
+
+// Výchozí hodnoty pro příklady (lze smazat)
+IgCarousel.defaultProps = {
+  instagramPosts: [
+    "https://www.instagram.com/reel/DHYStjGoFpN/",
+    "https://www.instagram.com/p/DHCAkwIoPbo/",
+    "https://www.instagram.com/p/DGkpCNEo3QQ/",
+    "https://www.instagram.com/p/DFx_DtMofng/",
+    "https://www.instagram.com/p/DH5xSipCbKs/",
+    "https://www.instagram.com/p/DHbD7JzIAfE/",
+    "https://www.instagram.com/p/DEe_gisoXRo/",
+    "https://www.instagram.com/p/DIgfW3bopJ7/",
+  ],
 };
 
 export default IgCarousel;
