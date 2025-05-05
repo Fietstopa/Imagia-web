@@ -4,7 +4,7 @@ import React from "react";
 const EquipmentGallery = () => {
   const equipmentCategories = [
     {
-      name: "Světla",
+      name: "Záblesková a trvalá světla",
       items: [
         { id: 15, name: "GODOX DP800III-V, 800ws 2x" },
         { id: 14, name: "GODOX SL-150III" },
