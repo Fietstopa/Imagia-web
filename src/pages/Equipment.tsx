@@ -41,7 +41,9 @@ const EquipmentGallery = () => {
         { id: 9, name: "VĚTRÁK 150W" },
         { id: 10, name: "RADIOVÁ ŘIDÍCÍ JEDNOTKA GODOX XT-16 (VYSÍLAČ)" },
         { id: 11, name: "SMOKE GENERATOR LED-500" },
-        { id: 16, name: "VYBAVENÍ" },
+        { id: 16, name: "REFLEXNÍ DESKY" },
+        { id: 18, name: "PAPÍROVÁ POZADÍ" },
+        { id: 17, name: "VYBAVENÍ" },
       ],
     },
   ];
