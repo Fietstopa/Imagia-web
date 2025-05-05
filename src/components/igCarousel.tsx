@@ -48,10 +48,7 @@ const IgCarousel = ({ instagramPosts = [] }) => {
         dotListClass="custom-dot-list-style"
       >
         {instagramPosts.map((postUrl, index) => (
-          <div className="border-8 border-[#C8AD81]">
-            {" "}
-            <InstagramEmbed key={index} url={postUrl} width={328} />
-          </div>
+          <InstagramEmbed key={index} url={postUrl} width={328} />
         ))}
       </Carousel>
     </div>
