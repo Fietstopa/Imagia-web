@@ -70,7 +70,7 @@ const Navbar = () => {
         <NavLink to="/room3" pathname={pathname} label={t("navbar.room3")} />
         <NavLink to="/whyus" pathname={pathname} label={t("navbar.whyus")} />
 
-        <NavLink to="/rules" pathname={pathname} label="Pravidla" />
+        <NavLink to="/rules" pathname={pathname} label={t("navbar.rules")} />
         <NavLink
           to="/coupons"
           pathname={pathname}
@@ -161,7 +161,7 @@ const Navbar = () => {
           onClick={() => setMenuOpen(false)}
           className="text-2xl text-white hover:text-[#C7AC81] transition-colors"
         >
-          Pravidla
+          {t("navbar.rules")}
         </Link>
 
         <div className="">

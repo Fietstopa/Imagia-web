@@ -1,3 +1,4 @@
+import { useTranslation, Trans } from "react-i18next";
 import CustomCaption from "../components/CustomCaption";
 import f1 from "/images/foto1.jpg";
 import f2 from "/images/foto2.jpg";
@@ -5,6 +6,8 @@ import mapimage from "/images/mapimage.png";
 import { Helmet } from "react-helmet";
 
 const PromoPageOne = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div
@@ -12,8 +15,8 @@ const PromoPageOne = () => {
         className="overflow-x-hidden relative py-8 md:py-0"
       >
         <CustomCaption
-          title="Každý snímek má smysl"
-          subtitle="Každý detail má váhu"
+          title={t("title")}
+          subtitle={t("subtitle")}
           classProps="text-center text-4xl md:text-6xl px-4 mb-8 md:mb-12"
         />
 
@@ -22,35 +25,24 @@ const PromoPageOne = () => {
           <div className="md:order-1 w-full h-[300px] md:h-auto relative">
             <img
               src={f1}
-              alt="Fotoateliér v Brně – snímek z ateliéru Imagia"
-              className="w-full h-full object-cover rounded-lg shadow-lg md:p-10 p-4"
+              alt={t("altTags.foto1")}
+              className="w-ful object-cover  shadow-lg  p-4"
             />
           </div>
 
           {/* Textový obsah - mobil uprostřed, desktop uprostřed */}
-          <div className="md:order-2 flex items-center">
-            <div className="text-[#777777] font-[Montserrat] space-y-4 md:space-y-6 text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose">
-              <p>
-                Vítejte v ateliéru Imagia – útulném a kreativním prostoru pro
-                focení v srdci Brna. Najdete nás na ulici Milady Horákové, jen
-                pár minut jízdy z centra města.
-              </p>
-
-              <p>
-                Náš ateliér propojuje moderní fotografii s osobním a přívětivým
-                přístupem – ideální pro portréty, rodinná focení nebo
-                profesionální snímky. Přijet k nám je snadné: stačí naskočit na{" "}
-                <a className="relative group text-[#C6AB81] font-bold underline  transition-colors">
-                  Tramvaj číslo 9{" "}
-                </a>{" "}
-                a jste doslova pár kroků od našich dveří.
-              </p>
-
-              <p>
-                Ať už chcete zachytit výjimečné vzpomínky, nebo vytvořit něco
-                uměleckého, Imagia je to pravé místo, kde vaše vize ožívají. Už
-                se nemůžeme dočkat, až vás přivítáme!
-              </p>
+          <div className="md:order-2 flex">
+            <div className="text-[#777777] font-[Montserrat] space-y-4 md:space-y-6 text-sm md:text-base leading-relaxed md:leading-loose">
+              <Trans
+                i18nKey="descriptionText"
+                components={{
+                  tram: (
+                    <span className="relative group text-[#C6AB81] font-bold underline transition-colors" />
+                  ),
+                  br: <br />,
+                  firstline: <span className="ml-8" />,
+                }}
+              />
             </div>
           </div>
 
@@ -58,8 +50,8 @@ const PromoPageOne = () => {
           <div className="md:order-3 w-full h-[300px] md:h-auto relative">
             <img
               src={f2}
-              alt="Druhý snímek z ateliéru Imagia v Brně"
-              className="w-full h-full object-cover rounded-lg shadow-lg md:p-10 p-4"
+              alt={t("altTags.foto2")}
+              className="w-full  object-cover  shadow-lg  p-4"
             />
           </div>
         </div>
