@@ -16,14 +16,15 @@ const EquipmentGallery = () => {
     {
       name: "Světelné modifikátory",
       items: [
-        { id: 2, name: "SOFTBOX-OCTABOX GODOX S VOŠTINOU 95CM 2x" },
-        { id: 3, name: "SOFTBOX NANLITE 60X90 2x" },
-        { id: 4, name: "BALÓNOVÝ SOFTBOX GODOX 65 CM" },
-        { id: 5, name: "SOFTBOX-OCTABOX GODOX 95CM 2x" },
         {
           id: 12,
           name: "PROJEKČNÍ ADAPTÉR GODOX BLP (GOBO) + SADA GOBO FILTRŮ",
         },
+        { id: 5, name: "SOFTBOX-OCTABOX GODOX 95CM 2x" },
+
+        { id: 2, name: "VOŠTINA K SOFTBOXU GODOX 95CM 2x" },
+        { id: 3, name: "SOFTBOX NANLITE 60X90 2x" },
+        { id: 4, name: "BALÓNOVÝ SOFTBOX GODOX 65 CM" },
       ],
     },
     {
