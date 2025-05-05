@@ -83,6 +83,140 @@ const EquipmentGallery = () => {
           </div>
         </div>
       ))}
+
+      <div className="max-w-6xl  mx-auto p-6 font-[Montserrat] mt-40">
+        <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          INFORMACE O NAŠEM VYBAVENÍ
+        </h1>
+
+        <div className="bg-white border border-[#C8AD81]  shadow-md p-6 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            TRVALÁ SVĚTLA
+          </h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <li className="flex items-center">
+              <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+              <span>NANLITE FS-300B LED</span>
+            </li>
+            <li className="flex items-center">
+              <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+              <span>Bi-color</span>
+            </li>
+            <li className="flex items-center">
+              <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+              <span>GODOX SL-150III</span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-white border border-[#C8AD81] shadow-md p-6 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            ZABLESKOVÁ SVĚTLA
+          </h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <li className="flex items-center">
+              <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+              <span>GODOX DP800III-V, 800WS</span>
+            </li>
+            <li className="flex items-center">
+              <span className="bg-gray-100 px-3 py-1  mr-3">4x</span>
+              <span>PAVOTUBE NANLITE T8-7X</span>
+            </li>
+            <li className="flex items-center">
+              <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+              <span>110 CM (2 světla kit)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-white border border-[#C8AD81]  shadow-md p-6">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            SVĚTELNÉ MODIFIKÁTORY
+          </h2>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-medium text-gray-600 mb-3">
+              PROJEKČNÍ ADAPTĚR
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+                <span>GODOX BLP ("GOBO"), sada GOBO filtrů</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-medium text-gray-600 mb-3">SOFTBOXY</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+                <span>SOFTBOX NANLITE 60X90</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+                <span>SOFTBOX-OCTABOX GODOX 95CM s voštinou</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+                <span>BALÓNOVÝ SOFTBOX GODOX 65 CM</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-medium text-gray-600 mb-3">
+              DALŠÍ VYBAVENÍ
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+                <span>REFLEKTORY</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+                <span>KLAPKY S BAREVNÝMI FILTRY</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">2x</span>
+                <span>KOMÍNEK s voštinou</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">1x</span>
+                <span>RADIOVÁ ŘIDÍCÍ JEDNOTKA GODOX XT-16 (VYSÍLAČ)</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">1x</span>
+                <span>STATIV STUDIOVÝ 2,8M</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">1x</span>
+                <span>JEŘÁBOVÝ STATIV BOOM 3M</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">1x</span>
+                <span>BOOM STAND STUDIOVÝ (JEŘÁBOVÝ) STATIV 4,4M</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">1x</span>
+                <span>SMOKE GENERATOR LED-500</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">1x</span>
+                <span>VĚTRÁK 150W</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">1x</span>
+                <span>REFLEXNÍ DESKY</span>
+              </li>
+              <li className="flex items-center">
+                <span className="bg-gray-100 px-3 py-1  mr-3">1x</span>
+                <span>PAPIROVÁ POZADÍ</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
