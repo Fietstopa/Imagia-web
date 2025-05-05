@@ -20,7 +20,10 @@ const EquipmentGallery = () => {
         { id: 3, name: "SOFTBOX NANLITE 60X90 2x" },
         { id: 4, name: "BALÓNOVÝ SOFTBOX GODOX 65 CM" },
         { id: 5, name: "SOFTBOX-OCTABOX GODOX 95CM 2x" },
-        { id: 12, name: "PROJEKČNÍ ADAPTÉR GODOX BLP, SADA GOBO FILTRŮ" },
+        {
+          id: 12,
+          name: "PROJEKČNÍ ADAPTÉR/REFLEKTOR GODOX BLP (GOBO) + SADA GOBO FILTRŮ",
+        },
       ],
     },
     {
