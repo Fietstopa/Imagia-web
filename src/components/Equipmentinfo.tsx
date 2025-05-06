@@ -13,8 +13,11 @@ const EquipmentInfo: React.FC = () => {
     },
     {
       title: "ZABLESKOVÁ SVĚTLA",
+      items: [{ quantity: "2x", name: "GODOX DP800III-V, 800WS" }],
+    },
+    {
+      title: "RGB LED SVĚTLA",
       items: [
-        { quantity: "2x", name: "GODOX DP800III-V, 800WS" },
         {
           quantity: "2x",
           name: "PAVOTUBE NANLITE T8-7X 110 CM",
@@ -25,24 +28,39 @@ const EquipmentInfo: React.FC = () => {
       title: "SVĚTELNÉ MODIFIKÁTORY",
       subsections: [
         {
-          title: "PROJEKČNÍ ADAPTĚR",
+          title: "",
           items: [
-            { quantity: "2x", name: 'GODOX BLP ("GOBO"), sada GOBO filtrů' },
+            {
+              quantity: "1x",
+              name: 'PROJEKČNÍ ADAPTĚR GODOX BLP ("GOBO"), sada GOBO filtrů',
+            },
           ],
         },
         {
-          title: "SOFTBOXY",
+          title: "",
           items: [
             { quantity: "2x", name: "SOFTBOX-OCTABOX GODOX 95CM s voštinou" },
+            { quantity: "2x", name: "SOFTBOX NANLITE 60X90" },
+
             { quantity: "1x", name: "BALÓNOVÝ SOFTBOX GODOX 65 CM" },
           ],
         },
         {
-          title: "DALŠÍ VYBAVENÍ",
+          title: "",
           items: [
             { quantity: "4x", name: "REFLEKTORY" },
             { quantity: "1x", name: "KLAPKY S BAREVNÝMI FILTRY" },
             { quantity: "1x", name: "KOMÍNEK s voštinou" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "DOPLŇKOVÉ VYBAVENÍ",
+      subsections: [
+        {
+          title: "",
+          items: [
             {
               quantity: "1x",
               name: "RADIOVÁ ŘIDÍCÍ JEDNOTKA GODOX XT-16 (VYSÍLAČ)",
@@ -56,7 +74,10 @@ const EquipmentInfo: React.FC = () => {
             { quantity: "1x", name: "SMOKE GENERATOR LED-500" },
             { quantity: "1x", name: "VĚTRÁK 150W" },
             { quantity: "2x", name: "REFLEXNÍ DESKY" },
-            { quantity: "1x", name: "PAPIROVÁ POZADÍ" },
+            {
+              quantity: "4x",
+              name: "PAPIROVÁ POZADÍ 2,75x11m (zelená, bílá, bežová, červená)",
+            },
           ],
         },
       ],
