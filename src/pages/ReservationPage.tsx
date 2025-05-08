@@ -91,7 +91,7 @@ const ReservationPage = () => {
                 </h3>
                 <p className="text-gray-300 font-bold">
                   !!! Připravujeme pro vás nový krásný prostor, který se otevře
-                  na začátku května, ale už teď si ho můžete rezervovat !!!
+                  12. května, ale už teď si ho můžete rezervovat !!!
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="text-[#C7AC81] font-bold text-xl">
