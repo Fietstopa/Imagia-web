@@ -9,6 +9,28 @@ const ReservationPage = () => {
     null
   );
 
+  const studio1CashPrices = [
+    { hours: 1, price: "1 000 Kč" },
+    { hours: 2, price: "1 900 Kč" },
+    { hours: 3, price: "2 800 Kč" },
+    { hours: 4, price: "3 700 Kč" },
+    { hours: 5, price: "4 600 Kč" },
+    { hours: 6, price: "5 500 Kč" },
+    { hours: 7, price: "6 400 Kč" },
+    { hours: 8, price: "7 300 Kč" },
+  ];
+
+  const studio2CashPrices = [
+    { hours: 1, price: "1 500 Kč" },
+    { hours: 2, price: "2 900 Kč" },
+    { hours: 3, price: "4 300 Kč" },
+    { hours: 4, price: "5 700 Kč" },
+    { hours: 5, price: "7 100 Kč" },
+    { hours: 6, price: "8 500 Kč" },
+    { hours: 7, price: "9 900 Kč" },
+    { hours: 8, price: "11 300 Kč" },
+  ];
+
   const handleHourClick = (hours: number) => {
     let url = "";
 
@@ -76,8 +98,12 @@ const ReservationPage = () => {
             {/* Studio 2 Card */}
             <button
               onClick={() => setSelectedStudio(2)}
-              className="bg-[#1a1a1a] border border-[#C7AC81]/50 hover:bg-[#2a2a2a] transition-all  overflow-hidden shadow-lg w-full max-w-sm"
+              className="bg-[#1a1a1a] relative border border-[#C7AC81]/50 hover:bg-[#2a2a2a] transition-all  overflow-hidden shadow-lg w-full max-w-sm"
             >
+              <div className="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-md z-10">
+                Sezonní sleva
+              </div>
+
               <div className="h-48 bg-gray-800 flex items-center justify-center">
                 <img
                   src={sal2}
@@ -94,8 +120,9 @@ const ReservationPage = () => {
                   12. května, ale už teď si ho můžete rezervovat !!!
                 </p>
                 <div className="mt-4 flex items-center gap-2">
+                  <span className="text-gray-400 line-through">1800 Kč/h</span>
                   <span className="text-[#C7AC81] font-bold text-xl">
-                    1800 Kč/h
+                    1500 Kč/h + sleva 15%
                   </span>
                 </div>
               </div>
@@ -182,16 +209,10 @@ const ReservationPage = () => {
                   </button>
                 ))
               : // Cash payment buttons with prices
-                [
-                  { hours: 1, price: "1 000 Kč" },
-                  { hours: 2, price: "1 900 Kč" },
-                  { hours: 3, price: "2 800 Kč" },
-                  { hours: 4, price: "3 700 Kč" },
-                  { hours: 5, price: "4 600 Kč" },
-                  { hours: 6, price: "5 500 Kč" },
-                  { hours: 7, price: "6 400 Kč" },
-                  { hours: 8, price: "7 300 Kč" },
-                ].map((item) => (
+                (selectedStudio === 1
+                  ? studio1CashPrices
+                  : studio2CashPrices
+                ).map((item) => (
                   <button
                     key={item.hours}
                     onClick={() => handleHourClick(item.hours)}
