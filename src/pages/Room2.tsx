@@ -27,21 +27,23 @@ const Room2 = () => {
         btnText="Rezervace"
       />
 
-      <div className="min-h-screen flex flex-col justify-center items-center py-8 md:py-20">
+      <div className="min-h-screen flex flex-col justify-center items-center py-10 md:py-20 px-4 md:px-10">
         <CustomCaption
           title="Sál"
           subtitle="Aurora"
           classProps="!py-10 md:!py-20"
         />
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-20 pb-10 px-20 md:pb-20">
+
+        {/* Sekce obrázek + text */}
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-20 pb-10 md:pb-20 w-full">
           <img
             src={imageUrl1}
-            alt="Interiér sálu Arch Deco"
-            className="w-full h-auto object-cover shadow-md"
+            alt="Interiér sálu Aurora"
+            className="w-full h-auto object-cover shadow-md "
           />
 
-          <div className="text-sm md:text-base lg:text-lg text-[#555] font-[Montserrat]  leading-relaxed space-y-6">
-            <ul className="list-disc">
+          <div className="text-sm md:text-base lg:text-lg text-[#555] font-[Montserrat] leading-relaxed space-y-6">
+            <ul className="list-disc pl-5 space-y-2">
               <li>
                 <strong>70 m²</strong> světla, prostoru a inspirace pro vaši
                 tvorbu
@@ -74,22 +76,23 @@ const Room2 = () => {
           </div>
         </div>
 
-        <div className="w-full px-4 md:px-8 lg:px-10 xl:px-10">
-          <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-10 h-full">
-            {/* První obrázek - mobil nad textem, desktop vlevo */}
-            <div className="md:order-1 w-full h-[300px] md:h-auto relative">
+        {/* Sekce foto - text - foto */}
+        <div className="w-full">
+          <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-10">
+            {/* Obrázek vlevo (na mobilu nahoře) */}
+            <div className="md:order-1 w-full h-[300px] md:h-auto">
               <img
                 src={f1}
-                alt="Fotoateliér v Brně – snímek z ateliéru Imagia"
-                className="w-full h-full object-cover shadow-lg md:p-5 p-4"
+                alt="Fotoateliér Imagia"
+                className="w-full h-full object-cover shadow-lg  md:p-4 p-2"
                 loading="lazy"
               />
             </div>
 
-            {/* Textový obsah - mobil uprostřed, desktop uprostřed */}
+            {/* Text uprostřed */}
             <div className="md:order-2 flex items-center">
-              <div className="text-[#777777] font-[Montserrat] space-y-4 md:space-y-6 text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose">
-                <ul className="list-disc">
+              <div className="text-[#777777] font-[Montserrat] text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose space-y-4 md:space-y-6">
+                <ul className="list-disc pl-5 space-y-2">
                   <li>
                     <strong>3 velká okna</strong> s mramorovými parapety
                   </li>
@@ -97,7 +100,7 @@ const Room2 = () => {
                     <strong>Ložnice a obývací pokoj</strong> oddělené skleněnými
                     dveřmi
                   </li>
-                  <li>Bílá pohovka, postel, noční stolek nástěnná svítidla</li>
+                  <li>Bílá pohovka, postel, noční stolek, nástěnná svítidla</li>
                   <li>Krb, vintage zrcadlo, stylové židle, 2 lustry</li>
                   <li>
                     Profesionální vybavení{" "}
@@ -112,18 +115,20 @@ const Room2 = () => {
               </div>
             </div>
 
-            {/* Druhý obrázek - mobil pod textem, desktop vpravo */}
-            <div className="md:order-3 w-full h-[300px] md:h-auto relative">
+            {/* Obrázek vpravo (na mobilu dole) */}
+            <div className="md:order-3 w-full h-[300px] md:h-auto">
               <img
                 src={f2}
-                alt="Druhý snímek z ateliéru Imagia v Brně"
-                className="w-full h-full object-cover shadow-lg md:p-5 p-4"
+                alt="Ateliér Imagia – Aurora"
+                className="w-full h-full object-cover shadow-lg  md:p-4 p-2"
                 loading="lazy"
               />
             </div>
           </div>
         </div>
-        <div className="text-[#777777] font-[Montserrat] text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose  pt-10 md:pt-16 pb-20 text-center">
+
+        {/* Závěrečný odstavec */}
+        <div className="text-[#777777] font-[Montserrat] text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose pt-10 md:pt-16 pb-20 text-center px-2 md:px-10">
           <p>
             <strong>Sál je ideální</strong> pro rodinné, individuální a svatební
             focení, stejně tak i pro{" "}
