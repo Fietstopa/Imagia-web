@@ -13,6 +13,7 @@ import imageUrl3 from "../../public/images/interior/11.jpg";
 import imageUrlVertical1 from "../../public/images/vertical/3.jpg";
 import imageUrlVertical2 from "../../public/images/vertical/22.jpg";
 import imageUrlVertical3 from "../../public/images/vertical/2.jpg";
+import { image } from "framer-motion/client";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -43,9 +44,12 @@ const Home = () => {
   return (
     <div className="bg-gray-100">
       <ImageSwitcher
-        image1={image1}
-        image2={image2}
-        image3={image3}
+        imageDesktop1={image1}
+        imageDesktop2={image2}
+        imageDesktop3={image3}
+        imageMobile1={imageUrlVertical1}
+        imageMobile2={imageUrlVertical2}
+        imageMobile3={imageUrlVertical3}
         caption={t("home.caption")}
         undertext={t("home.secondaryCaption")}
         description={t("home.descriptionText")}

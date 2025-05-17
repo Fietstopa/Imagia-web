@@ -25,9 +25,12 @@ const Room1 = () => {
   return (
     <div className="bg-white">
       <ImageSwitcher
-        image1={imageUrl1}
-        image2={imageUrl2}
-        image3={imageUrl3}
+        imageDesktop1={imageUrl1}
+        imageDesktop2={imageUrl2}
+        imageDesktop3={imageUrl3}
+        imageMobile1={imageUrl1}
+        imageMobile2={imageUrl1}
+        imageMobile3={imageUrl1}
         caption="ARCH DECO"
         undertext="SÁL"
         description="Arch Deco je elegantní prostor, kde dominují jemné oblouky a měkké světlo.  Ideální prostředí pro portrétní i umělecké focení s nadčasovou atmosférou."

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IconLoader from "@/components/iconLoader";
 import sal1 from "../../public/images/interior/2.jpg";
-import sal2 from "../../public/images/room1/COMINGSOON.png";
+import sal2 from "../../public/images/room1/1.jpg";
 
 const ReservationPage = () => {
   const [selectedStudio, setSelectedStudio] = useState<1 | 2 | null>(null);
