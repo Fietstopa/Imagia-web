@@ -17,10 +17,6 @@ const Home = () => {
 
   return (
     <div className="bg-gray-100">
-      <Helmet>
-        <title>{t("home.title")}</title>
-      </Helmet>
-
       <ImageSwitcher
         imageDesktop1={imageUrl1}
         imageDesktop2={imageUrl2}
