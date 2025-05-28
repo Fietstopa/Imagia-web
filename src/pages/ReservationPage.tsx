@@ -84,7 +84,7 @@ const ReservationPage = () => {
                 <p className="text-gray-300">
                   Elegantní prostor se stylovým designem, moderním nábytkem a
                   papírovými pozadí
-                  <br /> <br />
+                  <br /> <br /> <br />
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="text-gray-400 line-through">1300 Kč/h</span>
@@ -115,9 +115,10 @@ const ReservationPage = () => {
                 <h3 className="text-2xl font-bold text-[#C7AC81] mb-2">
                   Sál Aurora
                 </h3>
-                <p className="text-gray-300 font-bold">
-                  !!! Připravujeme pro vás nový krásný prostor, který se otevře
-                  12. května, ale už teď si ho můžete rezervovat !!!
+                <p className="text-gray-300 ">
+                  Tenhle sál je opravdu perla našeho studia. Jedinečná lehkost a
+                  modernost interiéru dodají každému vašemu záběru nádech
+                  elegance.
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="text-gray-400 line-through">1800 Kč/h</span>
