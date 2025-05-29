@@ -114,7 +114,7 @@ const Room2: React.FC = () => {
         </div>
 
         {/* SEKCE 2: FOTO – TEXT – FOTO */}
-        <div className="bg-stone-400 text-white py-20 flex flex-col md:flex-row items-center justify-center gap-10 w-full ">
+        <div className="bg-stone-400 text-white py-20 flex flex-col md:flex-row items-center  gap-30 w-full ">
           {/* Levý obrázek */}
           <div className="w-full md:w-1/4">
             <img
@@ -126,7 +126,7 @@ const Room2: React.FC = () => {
           </div>
 
           {/* Text */}
-          <div className="w-full md:w-2/4 font-[Montserrat]">
+          <div className="w-full md:w-2/4 flex flex-col items-center justify-center font-[Montserrat]">
             <h2 className="text-2xl md:text-3xl font-semibold mb-6">
               Popis sálu
             </h2>
