@@ -17,6 +17,18 @@ const Galerija = () => {
     "/images/interior/9.jpg",
     "/images/interior/10.jpg",
   ];
+  const aurora = [
+    "/images/aurora/5.jpg",
+    "/images/aurora/2.jpg",
+    "/images/aurora/3.jpg",
+    "/images/aurora/6.jpg",
+    "/images/aurora/22.jpg",
+    "/images/aurora/7.jpg",
+    "/images/aurora/16.jpg",
+    "/images/aurora/8.jpg",
+    "/images/aurora/9.jpg",
+  ];
+
   const textil = [
     "/images/textil/1.jpg",
     "/images/textil/2.jpg",
@@ -59,7 +71,7 @@ const Galerija = () => {
   >(() => {
     const all: string[] = [];
     const map: Record<string, number> = {};
-    const galleries = [images, textil, valentyn, jaro, newYear];
+    const galleries = [aurora, images, textil, valentyn, jaro, newYear];
 
     galleries.forEach((gallery) => {
       gallery.forEach((imgUrl) => {
@@ -81,7 +93,14 @@ const Galerija = () => {
 
   return (
     <div className="py-20">
-      <CustomCaption title="ARCH DECO " subtitle="SÁL" classProps="text-4xl" />
+      <CustomCaption title="SÁL" subtitle="AURORA" classProps="text-4xl" />
+      <MansoryDouble
+        imageUrls={aurora}
+        colGap={10}
+        wideItems={[1, 5, 6]}
+        onImageClick={handleImageClick}
+      />
+      <CustomCaption title="SÁL" subtitle="ARCH DECO" classProps="text-4xl" />
       <MansoryDouble
         imageUrls={images}
         colGap={10}
