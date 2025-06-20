@@ -4,33 +4,42 @@ import sal1 from "../../public/images/interior/2.jpg";
 import sal2 from "../../public/images/room1/1.jpg";
 
 const ReservationPage = () => {
+  /* ----------------------------- STATE -------------------------------- */
   const [selectedStudio, setSelectedStudio] = useState<1 | 2 | null>(null);
   const [paymentMethod, setPaymentMethod] = useState<"cash" | "card" | null>(
     null
   );
 
+  /* ----------------------------- PRICES ------------------------------- */
+  // Hotovostní ceník – Sál 1
   const studio1CashPrices = [
     { hours: 1, price: "1 000 Kč" },
-    { hours: 2, price: "1 900 Kč" },
-    { hours: 3, price: "2 800 Kč" },
-    { hours: 4, price: "3 700 Kč" },
-    { hours: 5, price: "4 600 Kč" },
-    { hours: 6, price: "5 500 Kč" },
-    { hours: 7, price: "6 400 Kč" },
-    { hours: 8, price: "7 300 Kč" },
+    { hours: 2, price: "1 800 Kč" }, // 900 Kč/h
+    { hours: 3, price: "2 400 Kč" }, // 800 Kč/h
+    { hours: 4, price: "2 800 Kč" }, // 700 Kč/h
+    { hours: 5, price: "3 500 Kč" },
+    { hours: 6, price: "4 200 Kč" },
+    { hours: 7, price: "4 900 Kč" },
+    { hours: 8, price: "5 600 Kč" },
   ];
 
+  // Hotovostní ceník – Sál 2
   const studio2CashPrices = [
     { hours: 1, price: "1 500 Kč" },
-    { hours: 2, price: "2 900 Kč" },
-    { hours: 3, price: "4 300 Kč" },
-    { hours: 4, price: "5 700 Kč" },
-    { hours: 5, price: "7 100 Kč" },
-    { hours: 6, price: "8 500 Kč" },
-    { hours: 7, price: "9 900 Kč" },
-    { hours: 8, price: "11 300 Kč" },
+    { hours: 2, price: "2 600 Kč" },
+    { hours: 3, price: "3 600 Kč" },
+    { hours: 4, price: "4 400 Kč" },
+    { hours: 5, price: "5 500 Kč" },
+    { hours: 6, price: "6 600 Kč" },
+    { hours: 7, price: "7 700 Kč" },
+    { hours: 8, price: "8 800 Kč" },
   ];
 
+  // Kartové ceníky – identické s hotovostními podle zadání
+  const studio1CardPrices = [...studio1CashPrices];
+  const studio2CardPrices = [...studio2CashPrices];
+
+  /* ------------------------- HANDLERS --------------------------------- */
   const handleHourClick = (hours: number) => {
     let url = "";
 
@@ -46,26 +55,25 @@ const ReservationPage = () => {
       url = `https://cal.com/fotoatelier-imagia/rezervace-${hours}h-sal-2-${paymentSegment}?overlayCalendar=true`;
     }
 
-    if (url) {
-      window.location.href = url;
-    }
+    if (url) window.location.href = url;
   };
 
+  /* ----------------------------- RENDER ------------------------------- */
   return (
     <div className="pt-30 bg-black flex flex-col items-center min-h-screen text-white">
-      {/* Studio selection */}
+      {/* -------------------- VÝBĚR SÁLU -------------------------------- */}
       {!selectedStudio && (
         <div className="text-center my-10 w-full">
           <h2 className="md:text-7xl text-4xl pb-15 font-[Literata]">
             Vyberte sál:
           </h2>
           <div className="flex flex-col md:flex-row gap-10 m-auto justify-center items-center px-4 max-w-4xl">
-            {/* Studio 1 Card */}
+            {/* --- Sál 1 -------------------------------------------------- */}
             <button
               onClick={() => setSelectedStudio(1)}
               className="bg-[#1a1a1a] border border-[#C7AC81]/50 hover:bg-[#2a2a2a] transition-all overflow-hidden shadow-lg w-full max-w-sm relative"
             >
-              {/* Discount Badge */}
+              {/* Badge */}
               <div className="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-md z-10">
                 Sezonní sleva
               </div>
@@ -95,27 +103,27 @@ const ReservationPage = () => {
               </div>
             </button>
 
-            {/* Studio 2 Card */}
+            {/* --- Sál 2 -------------------------------------------------- */}
             <button
               onClick={() => setSelectedStudio(2)}
-              className="bg-[#1a1a1a] relative border border-[#C7AC81]/50 hover:bg-[#2a2a2a] transition-all  overflow-hidden shadow-lg w-full max-w-sm"
+              className="bg-[#1a1a1a] relative border border-[#C7AC81]/50 hover:bg-[#2a2a2a] transition-all overflow-hidden shadow-lg w-full max-w-sm"
             >
               <div className="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-md z-10">
                 Sezonní sleva
               </div>
 
-              <div className="h-48 bg-gray-800 flex items-center justify-center">
+              <div className="h-48 overflow-hidden relative">
                 <img
                   src={sal2}
-                  alt="Sál Arch Deco"
+                  alt="Sál Aurora"
                   className="w-full h-full object-cover transition-transform hover:scale-105"
-                />{" "}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-[#C7AC81] mb-2">
                   Sál Aurora
                 </h3>
-                <p className="text-gray-300 ">
+                <p className="text-gray-300">
                   Tenhle sál je opravdu perla našeho studia. Jedinečná lehkost a
                   modernost interiéru dodají každému vašemu záběru nádech
                   elegance.
@@ -132,15 +140,14 @@ const ReservationPage = () => {
         </div>
       )}
 
-      {/* Rest of the code remains the same */}
-      {/* Payment method selection */}
+      {/* ------------------ VÝBĚR PLATBY -------------------------------- */}
       {selectedStudio && !paymentMethod && (
         <div className="text-center my-16">
           <h2 className="md:text-5xl text-3xl pb-10 font-[Literata] text-[#C7AC81]">
             Vyberte způsob platby
           </h2>
           <div className="flex flex-col md:flex-row gap-8 justify-center items-center max-w-2xl mx-auto">
-            {/* Platební karta */}
+            {/* --- Platební karta --------------------------------------- */}
             <button
               onClick={() => setPaymentMethod("card")}
               className="group relative bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#C7AC81]/30 hover:border-[#C7AC81]/50 p-8 w-full max-w-xs transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
@@ -159,13 +166,13 @@ const ReservationPage = () => {
                   Online platba kartou
                 </span>
               </div>
-              <div className="absolute inset-0 border-2 border-[#C7AC81]/0 group-hover:border-[#C7AC81]/20 pointer-events-none transition-all duration-300"></div>
+              <div className="absolute inset-0 border-2 border-[#C7AC81]/0 group-hover:border-[#C7AC81]/20 pointer-events-none transition-all duration-300" />
             </button>
 
-            {/* Hotovost */}
+            {/* --- Hotovost --------------------------------------------- */}
             <button
               onClick={() => setPaymentMethod("cash")}
-              className="group relative bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#C7AC81]/30 hover:border-[#C7AC81]/50  p-8 w-full max-w-xs transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="group relative bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#C7AC81]/30 hover:border-[#C7AC81]/50 p-8 w-full max-w-xs transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               <div className="flex flex-col items-center">
                 <div className="mb-6 p-4 bg-[#C7AC81]/10 rounded-full group-hover:bg-[#C7AC81]/20 transition-colors">
@@ -179,12 +186,13 @@ const ReservationPage = () => {
                   Platba na místě
                 </span>
               </div>
-              <div className="absolute inset-0 border-2 border-[#C7AC81]/0 group-hover:border-[#C7AC81]/20 rounded-xl pointer-events-none transition-all duration-300"></div>
+              <div className="absolute inset-0 border-2 border-[#C7AC81]/0 group-hover:border-[#C7AC81]/20 rounded-xl pointer-events-none transition-all duration-300" />
             </button>
           </div>
         </div>
       )}
-      {/* Hour selection */}
+
+      {/* --------------- VÝBĚR DÉLKY REZERVACE --------------------------- */}
       {selectedStudio && paymentMethod && (
         <div className="mt-8 w-full px-4 flex flex-col items-center gap-8 max-w-2xl">
           <h2 className="md:text-5xl text-3xl font-[Literata] text-center text-[#C7AC81]">
@@ -195,42 +203,31 @@ const ReservationPage = () => {
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
-            {paymentMethod === "card"
-              ? // Card payment buttons
-                [1, 2, 3, 4, 5, 6, 7, 8].map((hour) => (
-                  <button
-                    key={hour}
-                    onClick={() => handleHourClick(hour)}
-                    className="group relative bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#C7AC81]/30 hover:border-[#C7AC81]/60 rounded-lg p-4 transition-all duration-300 shadow-md hover:shadow-lg"
-                  >
-                    <span className="text-2xl font-medium text-white">
-                      {hour} h
-                    </span>
-                    <div className="absolute inset-0 border-2 border-[#C7AC81]/0 group-hover:border-[#C7AC81]/20 rounded-lg pointer-events-none transition-all duration-300"></div>
-                  </button>
-                ))
-              : // Cash payment buttons with prices
-                (selectedStudio === 1
-                  ? studio1CashPrices
-                  : studio2CashPrices
-                ).map((item) => (
-                  <button
-                    key={item.hours}
-                    onClick={() => handleHourClick(item.hours)}
-                    className="group relative bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#C7AC81]/30 hover:border-[#C7AC81]/60 rounded-lg p-4 transition-all duration-300 shadow-md hover:shadow-lg"
-                  >
-                    <span className="text-2xl font-medium text-white block">
-                      {item.hours} h
-                    </span>
-                    <span className="text-[#C7AC81] text-sm">{item.price}</span>
-                    <div className="absolute inset-0 border-2 border-[#C7AC81]/0 group-hover:border-[#C7AC81]/20 rounded-lg pointer-events-none transition-all duration-300"></div>
-                  </button>
-                ))}
+            {(paymentMethod === "card"
+              ? selectedStudio === 1
+                ? studio1CardPrices
+                : studio2CardPrices
+              : selectedStudio === 1
+              ? studio1CashPrices
+              : studio2CashPrices
+            ).map(({ hours, price }) => (
+              <button
+                key={hours}
+                onClick={() => handleHourClick(hours)}
+                className="group relative bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#C7AC81]/30 hover:border-[#C7AC81]/60 rounded-lg p-4 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                <span className="text-2xl font-medium text-white block">
+                  {hours} h
+                </span>
+                <span className="text-[#C7AC81] text-sm">{price}</span>
+                <div className="absolute inset-0 border-2 border-[#C7AC81]/0 group-hover:border-[#C7AC81]/20 rounded-lg pointer-events-none transition-all duration-300" />
+              </button>
+            ))}
           </div>
         </div>
       )}
     </div>
   );
 };
-//ff
+
 export default ReservationPage;
