@@ -16,23 +16,23 @@ const ReservationPage = () => {
     { hours: 1, price: "1 000 Kč" },
     { hours: 2, price: "1 800 Kč" }, // 900 Kč/h
     { hours: 3, price: "2 400 Kč" }, // 800 Kč/h
-    { hours: 4, price: "2 800 Kč" }, // 700 Kč/h
-    { hours: 5, price: "3 500 Kč" },
-    { hours: 6, price: "4 200 Kč" },
-    { hours: 7, price: "4 900 Kč" },
-    { hours: 8, price: "5 600 Kč" },
+    { hours: 4, price: "3 200 Kč" }, // 700 Kč/h
+    { hours: 5, price: "4 000 Kč" },
+    { hours: 6, price: "4 800 Kč" },
+    { hours: 7, price: "5 600 Kč" },
+    { hours: 8, price: "6 400 Kč" },
   ];
 
   // Hotovostní ceník – Sál 2
   const studio2CashPrices = [
-    { hours: 1, price: "1 500 Kč" },
-    { hours: 2, price: "2 600 Kč" },
-    { hours: 3, price: "3 600 Kč" },
-    { hours: 4, price: "4 400 Kč" },
-    { hours: 5, price: "5 500 Kč" },
-    { hours: 6, price: "6 600 Kč" },
-    { hours: 7, price: "7 700 Kč" },
-    { hours: 8, price: "8 800 Kč" },
+    { hours: 1, price: "1 400 Kč" },
+    { hours: 2, price: "2 800 Kč" },
+    { hours: 3, price: "3 900 Kč" },
+    { hours: 4, price: "5 200 Kč" },
+    { hours: 5, price: "6 500 Kč" },
+    { hours: 6, price: "7 800 Kč" },
+    { hours: 7, price: "9 100 Kč" },
+    { hours: 8, price: "10 400 Kč" },
   ];
 
   // Kartové ceníky – identické s hotovostními podle zadání
@@ -74,9 +74,6 @@ const ReservationPage = () => {
               className="bg-[#1a1a1a] border border-[#C7AC81]/50 hover:bg-[#2a2a2a] transition-all overflow-hidden shadow-lg w-full max-w-sm relative"
             >
               {/* Badge */}
-              <div className="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-md z-10">
-                Sezonní sleva
-              </div>
 
               <div className="h-48 overflow-hidden relative">
                 <img
@@ -95,7 +92,6 @@ const ReservationPage = () => {
                   <br /> <br /> <br />
                 </p>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="text-gray-400 line-through">1300 Kč/h</span>
                   <span className="text-[#C7AC81] font-bold text-xl">
                     1000 Kč/h
                   </span>
@@ -108,10 +104,6 @@ const ReservationPage = () => {
               onClick={() => setSelectedStudio(2)}
               className="bg-[#1a1a1a] relative border border-[#C7AC81]/50 hover:bg-[#2a2a2a] transition-all overflow-hidden shadow-lg w-full max-w-sm"
             >
-              <div className="absolute top-4 right-4 bg-red-600 text-white font-bold px-3 py-1 rounded-md z-10">
-                Sezonní sleva
-              </div>
-
               <div className="h-48 overflow-hidden relative">
                 <img
                   src={sal2}
@@ -129,9 +121,8 @@ const ReservationPage = () => {
                   elegance.
                 </p>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="text-gray-400 line-through">1800 Kč/h</span>
                   <span className="text-[#C7AC81] font-bold text-xl">
-                    1500 Kč/h + sleva 15%
+                    1400 Kč/h
                   </span>
                 </div>
               </div>
