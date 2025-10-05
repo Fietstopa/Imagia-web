@@ -25,7 +25,7 @@ const ReservationPage = () => {
 
   // Hotovostní ceník – Sál 2
   const studio2CashPrices = [
-    { hours: 1, price: "1 400 Kč" },
+    { hours: 1, price: "1 500 Kč" },
     { hours: 2, price: "2 800 Kč" },
     { hours: 3, price: "3 900 Kč" },
     { hours: 4, price: "5 200 Kč" },
@@ -122,7 +122,7 @@ const ReservationPage = () => {
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="text-[#C7AC81] font-bold text-xl">
-                    1400 Kč/h
+                    1500 Kč/h
                   </span>
                 </div>
               </div>
