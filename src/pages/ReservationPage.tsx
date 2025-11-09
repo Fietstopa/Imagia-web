@@ -91,6 +91,10 @@ const ReservationPage = () => {
                   papírovými pozadí
                   <br /> <br /> <br />
                 </p>
+                <p className="bg-red-500 text-white px-3 py-1 rounded inline-flex items-center justify-center gap-1">
+                  <span className="material-icons text-sm">ac_unit</span>
+                  Vánoční dekorace od 30.10.
+                </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="text-[#C7AC81] font-bold text-xl">
                     1000 Kč/h
@@ -119,6 +123,10 @@ const ReservationPage = () => {
                   Tenhle sál je opravdu perla našeho studia. Jedinečná lehkost a
                   modernost interiéru dodají každému vašemu záběru nádech
                   elegance.
+                </p>
+                <p className="bg-red-500 text-white px-3 py-1 rounded inline-flex items-center justify-center gap-1">
+                  <span className="material-icons text-sm">ac_unit</span>
+                  Vánoční dekorace od 25.10.
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="text-[#C7AC81] font-bold text-xl">
