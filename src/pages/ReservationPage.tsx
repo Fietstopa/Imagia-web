@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import IconLoader from "@/components/iconLoader";
 import sal1 from "../../public/images/interior/2.jpg";
 import sal2 from "../../public/images/room1/1.jpg";
+import sal3 from "../../public/images/musa/6.jpg";
 
 const ReservationPage = () => {
   /* ----------------------------- STATE -------------------------------- */
-  const [selectedStudio, setSelectedStudio] = useState<1 | 2 | null>(null);
+  const [selectedStudio, setSelectedStudio] = useState<1 | 2 | 3 | null>(null);
   const [paymentMethod, setPaymentMethod] = useState<"cash" | "card" | null>(
     null
   );
@@ -35,9 +36,22 @@ const ReservationPage = () => {
     { hours: 8, price: "10 400 Kč" },
   ];
 
+  // Hotovostní ceník – Sál 3 (Muza)
+  const studio3CashPrices = [
+    { hours: 1, price: "800 Kč" },
+    { hours: 2, price: "1 600 Kč" },
+    { hours: 3, price: "2 400 Kč" },
+    { hours: 4, price: "3 200 Kč" },
+    { hours: 5, price: "4 000 Kč" },
+    { hours: 6, price: "4 800 Kč" },
+    { hours: 7, price: "5 600 Kč" },
+    { hours: 8, price: "6 400 Kč" },
+  ];
+
   // Kartové ceníky – identické s hotovostními podle zadání
   const studio1CardPrices = [...studio1CashPrices];
   const studio2CardPrices = [...studio2CashPrices];
+  const studio3CardPrices = [...studio3CashPrices];
 
   /* ------------------------- HANDLERS --------------------------------- */
   const handleHourClick = (hours: number) => {
@@ -53,8 +67,12 @@ const ReservationPage = () => {
       const paymentSegment =
         paymentMethod === "card" ? "platebni-karta" : "hotovost";
       url = `https://cal.com/fotoatelier-imagia/rezervace-${hours}h-sal-2-${paymentSegment}?overlayCalendar=true`;
+    } else if (selectedStudio === 3) {
+      const paymentSegment =
+        paymentMethod === "card" ? "platebni-karta" : "hotovost";
+      url = `https://cal.com/muza-imagia-ok0zbr/rezervace-${hours}h-sal-3-${paymentSegment}`;
     }
-
+    //https://cal.com/muza-imagia-ok0zbr/rezervace-1h-sal-1-platebni-karta
     if (url) window.location.href = url;
   };
 
@@ -67,7 +85,7 @@ const ReservationPage = () => {
           <h2 className="md:text-7xl text-4xl pb-15 font-[Literata]">
             Vyberte sál:
           </h2>
-          <div className="flex flex-col md:flex-row gap-10 m-auto justify-center items-center px-4 max-w-4xl">
+          <div className="flex flex-col md:flex-row gap-10 m-auto justify-center items-center px-4 max-w-6xl">
             {/* --- Sál 1 -------------------------------------------------- */}
             <button
               onClick={() => setSelectedStudio(1)}
@@ -89,11 +107,6 @@ const ReservationPage = () => {
                 <p className="text-gray-300">
                   Elegantní prostor se stylovým designem, moderním nábytkem a
                   papírovými pozadí
-                  <br /> <br /> <br />
-                </p>
-                <p className="bg-red-500 text-white px-3 py-1 rounded inline-flex items-center justify-center gap-1">
-                  <span className="material-icons text-sm">ac_unit</span>
-                  Vánoční dekorace od 30.10.
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="text-[#C7AC81] font-bold text-xl">
@@ -124,13 +137,36 @@ const ReservationPage = () => {
                   modernost interiéru dodají každému vašemu záběru nádech
                   elegance.
                 </p>
-                <p className="bg-red-500 text-white px-3 py-1 rounded inline-flex items-center justify-center gap-1">
-                  <span className="material-icons text-sm">ac_unit</span>
-                  Vánoční dekorace od 25.10.
-                </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="text-[#C7AC81] font-bold text-xl">
                     1500 Kč/h
+                  </span>
+                </div>
+              </div>
+            </button>
+
+            {/* --- Sál 3 (Muza) ------------------------------------------- */}
+            <button
+              onClick={() => setSelectedStudio(3)}
+              className="bg-[#1a1a1a] relative border border-[#C7AC81]/50 hover:bg-[#2a2a2a] transition-all overflow-hidden shadow-lg w-full max-w-sm"
+            >
+              <div className="h-48 overflow-hidden relative">
+                <img
+                  src={sal3}
+                  alt="Sál Muza"
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-[#C7AC81] mb-2">
+                  Sál Muza
+                </h3>
+                <p className="text-gray-300">
+                  Nadčasový prostor s vintage nádechem. Harmonické místo, kde se setkává inspirace, estetika a tvůrčí svoboda.
+                </p>
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="text-[#C7AC81] font-bold text-xl">
+                    800 Kč/h
                   </span>
                 </div>
               </div>
@@ -205,10 +241,14 @@ const ReservationPage = () => {
             {(paymentMethod === "card"
               ? selectedStudio === 1
                 ? studio1CardPrices
-                : studio2CardPrices
+                : selectedStudio === 2
+                  ? studio2CardPrices
+                  : studio3CardPrices
               : selectedStudio === 1
-              ? studio1CashPrices
-              : studio2CashPrices
+                ? studio1CashPrices
+                : selectedStudio === 2
+                  ? studio2CashPrices
+                  : studio3CashPrices
             ).map(({ hours, price }) => (
               <button
                 key={hours}
