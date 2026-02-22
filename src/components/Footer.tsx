@@ -68,7 +68,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <a href="#" className="text-gray-400 flex hover:text-white">
               <IconLoader link={phone} styles="pr-2" />
-              +420 730 237 937
+              +420 606 216 174
             </a>
             <a href="#" className="text-gray-400 flex hover:text-white">
               <IconLoader link={email} styles="pr-2" />
