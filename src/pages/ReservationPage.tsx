@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import IconLoader from "@/components/iconLoader";
 import sal1 from "../../public/images/interior/2.jpg";
 import sal2 from "../../public/images/room1/1.jpg";
@@ -22,6 +22,8 @@ const ReservationPage = () => {
     { hours: 6, price: "4 800 Kč" },
     { hours: 7, price: "5 600 Kč" },
     { hours: 8, price: "6 400 Kč" },
+    { hours: 9 },
+    { hours: 10 },
   ];
 
   // Hotovostní ceník – Sál 2
@@ -48,8 +50,20 @@ const ReservationPage = () => {
     { hours: 8, price: "6 400 Kč" },
   ];
 
-  // Kartové ceníky – identické s hotovostními podle zadání
-  const studio1CardPrices = [...studio1CashPrices];
+  // Ceny Arch Deco pro platbu kartou podle Cal.com
+  const studio1CardPrices = [
+    { hours: 1, price: "1 000 Kč" },
+    { hours: 2, price: "1 800 Kč" },
+    { hours: 3, price: "2 600 Kč" },
+    { hours: 4, price: "3 400 Kč" },
+    { hours: 5, price: "4 200 Kč" },
+    { hours: 6, price: "5 000 Kč" },
+    { hours: 7, price: "5 800 Kč" },
+    { hours: 8, price: "6 600 Kč" },
+    { hours: 9, price: "7 400 Kč" },
+    { hours: 10, price: "8 200 Kč" },
+  ];
+  // Ostatní kartové ceníky odpovídají hotovostním
   const studio2CardPrices = [...studio2CashPrices];
   const studio3CardPrices = [...studio3CashPrices];
 
@@ -59,9 +73,9 @@ const ReservationPage = () => {
 
     if (selectedStudio === 1) {
       if (paymentMethod === "card") {
-        url = `https://cal.com/fotoatelier-imagia/rezervace-${hours}h-platebni-karta`;
+        url = `https://cal.com/archdeco-zqdn9b/rezervace-${hours}h-sal-1-platebni-karta`;
       } else {
-        url = `https://cal.com/fotoatelier-imagia/rezervace-${hours}h-sal-1-hotovost`;
+        url = `https://cal.com/archdeco-zqdn9b/rezervace-${hours}h-sal-1-hotovost`;
       }
     } else if (selectedStudio === 2) {
       const paymentSegment =
@@ -258,7 +272,7 @@ const ReservationPage = () => {
                 <span className="text-2xl font-medium text-white block">
                   {hours} h
                 </span>
-                <span className="text-[#C7AC81] text-sm">{price}</span>
+                {price && <span className="text-[#C7AC81] text-sm">{price}</span>}
                 <div className="absolute inset-0 border-2 border-[#C7AC81]/0 group-hover:border-[#C7AC81]/20 rounded-lg pointer-events-none transition-all duration-300" />
               </button>
             ))}

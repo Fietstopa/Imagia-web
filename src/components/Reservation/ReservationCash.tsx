@@ -3,19 +3,20 @@ import { useEffect } from "react";
 import IconLoader from "../iconLoader";
 interface IMyAppProps {
   label: string;
+  hours: number;
   style: string;
 }
-export default function ReservationCash({ label, style }: IMyAppProps) {
+export default function ReservationCash({ label, hours, style }: IMyAppProps) {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "rezervace-hotovost" });
+      const cal = await getCalApi({ namespace: `rezervace-${hours}h-sal-1-hotovost` });
       cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
     })();
-  }, []);
+  }, [hours]);
   return (
     <button
-      data-cal-namespace="rezervace-hotovost"
-      data-cal-link="fotoatelier-imagia/rezervace-hotovost"
+      data-cal-namespace={`rezervace-${hours}h-sal-1-hotovost`}
+      data-cal-link={`archdeco-zqdn9b/rezervace-${hours}h-sal-1-hotovost`}
       data-cal-config='{"layout":"month_view"}'
       className={style}
     >

@@ -10,7 +10,7 @@ export default function ReservationCard({ label, hours, style }: Props) {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({
-        namespace: `rezervace-${String(hours)}h-platebni-karta`,
+        namespace: `rezervace-${hours}h-sal-1-platebni-karta`,
       });
       cal("ui", {
         hideEventTypeDetails: false,
@@ -21,10 +21,8 @@ export default function ReservationCard({ label, hours, style }: Props) {
 
   return (
     <button
-      // Vygeneruje například "rezervace-4h-platebni-karta"
-      data-cal-namespace={`rezervace-${hours}h-platebni-karta`}
-      // Tady také přizpůsobte link tak, aby seděl se založenou událostí
-      data-cal-link={`fotoatelier-imagia/rezervace-${hours}h-platebni-karta`}
+      data-cal-namespace={`rezervace-${hours}h-sal-1-platebni-karta`}
+      data-cal-link={`archdeco-zqdn9b/rezervace-${hours}h-sal-1-platebni-karta`}
       data-cal-config='{"layout":"month_view"}'
       className={style}
     >
