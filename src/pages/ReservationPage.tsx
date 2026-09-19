@@ -22,8 +22,8 @@ const ReservationPage = () => {
     { hours: 6, price: "4 800 Kč" },
     { hours: 7, price: "5 600 Kč" },
     { hours: 8, price: "6 400 Kč" },
-    { hours: 9 },
-    { hours: 10 },
+    { hours: 9, price: "7 400 Kč" },
+    { hours: 10, price: "8 200 Kč" },
   ];
 
   // Hotovostní ceník – Sál 2
